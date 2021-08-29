@@ -11,13 +11,13 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
-IZIN=$( curl http://akses.zero-vpn-stores.tech:81/aksesvpnstore | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
 echo -e "${red}Permission Denied!${NC}";
 echo "Please Contact Admin"
-echo "Telegram t.me/bokirtampan"
+echo "Telegram"
 rm -f setup.sh
 exit 0
 fi
@@ -27,22 +27,22 @@ exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/weleh.sh && chmod +x weleh.sh && screen -S weleh ./weleh.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/weleh.sh && chmod +x weleh.sh && screen -S weleh ./weleh.sh
 #install ssr
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
-wget https://raw.githubusercontent.com/zerovpn1/vpn/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-#wget https://raw.githubusercontent.com/zerovpn1/vpn/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-#wget https://raw.githubusercontent.com/zerovpn1/vpn/main/ins-trojango.sh && chmod +x ins-trojango.sh && screen -S Trojan-go ./ins-trojango.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+#wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ins-trojango.sh && chmod +x ins-trojango.sh && screen -S Trojan-go ./ins-trojango.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -68,7 +68,7 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "https://raw.githubusercontent.com/zerovpn1/vpn/main/set.sh"
+wget -O /etc/set.sh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
@@ -117,12 +117,12 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   - Dev/Main                : Ceu Edoh Projectr"  | tee -a log-install.txt
-echo "   - Telegram                : T.me/bokirtampan"  | tee -a log-install.txt
-echo "   - Instagram               : @ands26"  | tee -a log-install.txt
-echo "   - Whatsapp                : 0895396172479"  | tee -a log-install.txt
-echo "   - Facebook                : https://www.facebook.com/ardiands" | tee -a log-install.txt
-echo "------------------Script Created By CEU EDOH PROJECT-----------------" | tee -a log-install.txt
+echo "   - Dev/Main                : "  | tee -a log-install.txt
+echo "   - Telegram                : "  | tee -a log-install.txt
+echo "   - Instagram               : "  | tee -a log-install.txt
+echo "   - Whatsapp                : "  | tee -a log-install.txt
+echo "   - Facebook                : " | tee -a log-install.txt
+echo "------------------Script Created By  ----------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 15 Sec"
 sleep 15
