@@ -51,8 +51,8 @@ rm -f /root/ss.sh
 rm -f /root/ssr.sh
 rm -f /root/ins-vt.sh
 rm -f /root/ipsec.sh
-rm -f /root/set-br.sh
-rm -f /root/ins-trojango.sh
+#rm -f /root/set-br.sh
+#rm -f /root/ins-trojango.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
