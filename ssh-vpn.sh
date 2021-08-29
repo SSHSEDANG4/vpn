@@ -14,20 +14,20 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=red-flat.my.id
-organizationalunit=red-flat.my.id
-commonname=red-flat.my.id
-email=admin@red-flat.my.id
+organization=sshsedang.my.id
+organizationalunit=sshsedang.my.id
+commonname=sshsedang.my.id
+email=admin@sshsedang.my.id
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
 cd
 
 # Edu OVPN
-wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cdn-ovpn.py
+wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cdn-ovpn.py
 chmod +x /usr/local/bin/edu-ovpn
 
 # Installing Service
@@ -117,14 +117,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -155,7 +155,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -218,7 +218,7 @@ apt-get install sslh -y
 
 #konfigurasi
 #port 443 to 77 and 777
-wget -O /etc/default/sslh "https://raw.githubusercontent.com/zerovpn1/vpn/main/sslh.conf"
+wget -O /etc/default/sslh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/sslh.conf"
 service sslh restart
 
 
@@ -232,7 +232,7 @@ sudo make install
 
 END
 #OpenVPN
-wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -265,7 +265,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/banner.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -304,48 +304,48 @@ apt -y install dos2unix
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/zerovpn1/vpn/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/zerovpn1/vpn/main/about.sh"
-wget -O usernew "https://raw.githubusercontent.com/zerovpn1/vpn/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/zerovpn1/vpn/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/zerovpn1/vpn/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/zerovpn1/vpn/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/zerovpn1/vpn/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/zerovpn1/vpn/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/zerovpn1/vpn/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/zerovpn1/vpn/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/zerovpn1/vpn/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/zerovpn1/vpn/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/zerovpn1/vpn/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/zerovpn1/vpn/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/zerovpn1/vpn/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/zerovpn1/vpn/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/zerovpn1/vpn/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/zerovpn1/vpn/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/zerovpn1/vpn/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/zerovpn1/vpn/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/zerovpn1/vpn/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/zerovpn1/vpn/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/zerovpn1/vpn/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/zerovpn1/vpn/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/zerovpn1/vpn/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/zerovpn1/vpn/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/zerovpn1/vpn/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/zerovpn1/vpn/main/xp.sh"
-wget -O swap "https://raw.githubusercontent.com/zerovpn1/vpn/main/swapkvm.sh"
-wget -O menu "https://raw.githubusercontent.com/zerovpn1/vpn/main/menu.sh"
-wget -O l2tp "https://raw.githubusercontent.com/zerovpn1/vpn/main/l2tp.sh"
-wget -O ssh "https://raw.githubusercontent.com/zerovpn1/vpn/main/ssh.sh"
-wget -O ssssr "https://raw.githubusercontent.com/zerovpn1/vpn/main/ssssr.sh"
-wget -O sstpp "https://raw.githubusercontent.com/zerovpn1/vpn/main/sstpp.sh"
-wget -O trojaan "https://raw.githubusercontent.com/zerovpn1/vpn/main/trojaan.sh"
-wget -O v2raay "https://raw.githubusercontent.com/zerovpn1/vpn/main/v2raay.sh"
-wget -O wgr "https://raw.githubusercontent.com/zerovpn1/vpn/main/wgr.sh"
-wget -O vleess "https://raw.githubusercontent.com/zerovpn1/vpn/main/vleess.sh"
-wget -O bbr "https://raw.githubusercontent.com/zerovpn1/vpn/main/bbr.sh"
-wget -O bannerku "https://raw.githubusercontent.com/zerovpn1/vpn/main/bannerku"
-wget -O /usr/bin/user-limit https://raw.githubusercontent.com/zerovpn1/vpn/main/user-limit.sh && chmod +x /usr/bin/user-limit
-wget -O autoreboot "https://raw.githubusercontent.com/zerovpn1/vpn/main/autoreboot.sh"
+wget -O add-host "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/about.sh"
+wget -O usernew "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/xp.sh"
+wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/swapkvm.sh"
+wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/menu.sh"
+wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/sstpp.sh"
+wget -O trojaan "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/trojaan.sh"
+wget -O v2raay "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/v2raay.sh"
+wget -O wgr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/wgr.sh"
+wget -O vleess "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/vleess.sh"
+wget -O bbr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bbr.sh"
+wget -O bannerku "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bannerku"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O autoreboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autoreboot.sh"
 chmod +x add-host
 chmod +x usernew
 chmod +x trial
@@ -391,7 +391,7 @@ echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
 cd
-echo "1" > /proc/sys/net/ipv4/ip_forward; wget -O /usr/bin/point 'https://raw.githubusercontent.com/zerovpn1/vpn/main/pointing.sh'; chmod +x /usr/bin/point
+echo "1" > /proc/sys/net/ipv4/ip_forward; wget -O /usr/bin/point 'https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/pointing.sh'; chmod +x /usr/bin/point
 apt autoclean -y
 apt -y remove --purge unscd
 apt-get -y --purge remove samba*;
