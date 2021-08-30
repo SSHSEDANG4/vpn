@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl http://akses.heyosam.me:81/sukirmanoke | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -12,7 +12,7 @@ echo -e "${red}Permission Denied!${NC}";
 echo "Only For Premium Users"
 exit 0
 fi
-IP=$(wget -qO- icanhazip.com);
+IP=$(wget -qO- ifconfig.co);
 date=$(date +"%Y-%m-%d")
 clear
 echo " Enter Your Email To Receive Message"
