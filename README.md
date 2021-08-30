@@ -1,1 +1,1 @@
-bangsat vpn
+kimochi vpn
