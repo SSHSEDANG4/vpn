@@ -15,9 +15,9 @@ fi
 apt install jq curl -y
 DOMAIN=zero-vpn-stores.tech
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.zero-vpn-stores.tech
-CF_ID=is650072@gmail.com
-CF_KEY=a9c1a5054860454c850a081cbeac297e835b8
+SUB_DOMAIN=${sub}.javakeisha.me
+CF_ID=sydjaja007@gmail.com
+CF_KEY=a7c92297e90f66de12ee06a72d79c72af83c9
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
