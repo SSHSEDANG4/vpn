@@ -3,7 +3,6 @@ kimochi vpn
 # autoscript
 
 Step 1 : <br>
-
 ```shell
 apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
