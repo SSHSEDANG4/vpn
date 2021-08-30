@@ -19,9 +19,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user sosohoha573@gmail.com
-from sosohoha573@gmail.com
-password kyeshqqzxkubxviv
+user sydjaja007@gmail.com
+from sydjaja007@gmail.com
+password j@vakeisha92
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
