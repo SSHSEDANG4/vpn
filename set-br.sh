@@ -19,9 +19,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user email kalian@gmail.com
-from email kaliN@gmail.com
-password password 
+user moving.headers@gmail.com
+from moving.headers@gmail.com
+password sfpeailiusrbibcs 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
