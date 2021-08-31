@@ -13,11 +13,11 @@ echo "Only For Premium Users"
 exit 0
 fi
 apt install jq curl -y
-DOMAIN=joekersvpn.com
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-SUB_DOMAIN=${sub}.joekersvpn.com
-CF_ID=doct.knowledge@gmail.com
-CF_KEY=aa816fbb38426b9fb210d390d2693fad1f8d3
+DOMAIN=zero-vpn-stores.tech
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
+SUB_DOMAIN=${sub}.zero-vpn-stores.tech
+CF_ID=is650072@gmail.com
+CF_KEY=a9c1a5054860454c850a081cbeac297e835b8
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
