@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -15,12 +15,13 @@ fi
 clear
 sqd="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | head -n1)"
 sqd2="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | tail -n1)"
-echo -e "======================================"
+echo -e "======================================" | lolcat
+echo -e "Name : Change Port Squid"
 echo -e ""
 echo -e "     [1]  Change Port $sqd"
 echo -e "     [2]  Change Port $sqd2"
 echo -e "     [x]  Exit"
-echo -e "======================================"
+echo -e "======================================" | lolcat
 echo -e ""
 read -p "     Select From Options [1-2 or x] :  " prot
 echo -e ""
@@ -62,7 +63,6 @@ exit
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Please enter an correct number" | lolcat
 ;;
 esac
-
