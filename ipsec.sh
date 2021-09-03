@@ -285,4 +285,8 @@ wget -O /usr/bin/renew-pptp https://raw.githubusercontent.com/SSHSEDANG4/vpn/mai
 wget -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-l2tp.sh && chmod +x /usr/bin/renew-l2tp
 touch /var/lib/premium-script/data-user-l2tp
 touch /var/lib/premium-script/data-user-pptp
+
+cd /usr/bin
+sed -i -e 's/\r$//' add-l2tp
+
 rm -f /root/ipsec.sh
