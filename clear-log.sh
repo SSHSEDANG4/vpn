@@ -21,5 +21,5 @@ echo > /var/log/syslog
 echo > /var/log/btmp
 echo > /var/log/messages
 echo > /var/log/debug
-echo -e "By Sukirman"
+echo -e "By SSH SEDANG NETWORK"
 
