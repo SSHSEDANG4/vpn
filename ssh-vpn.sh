@@ -349,6 +349,7 @@ wget -O bannerku "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bannerku
 wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/user-limit.sh && chmod +x /usr/bin/user-limit
 wget -O autoreboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autoreboot.sh"
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/running.sh"
+wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
 
 chmod +x add-host
 chmod +x usernew
@@ -392,6 +393,8 @@ chmod +x bbr
 chmod +x bannerku
 chmod +x autoreboot
 chmod +x running
+chmod +x update
+
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
