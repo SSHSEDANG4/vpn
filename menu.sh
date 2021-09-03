@@ -45,7 +45,7 @@ echo -e   "  \e[1;32m-----------------------------------------------------------
 echo -e   "   1\e[1;33m)\e[m SSH & OpenVPN Menu"
 echo -e   "   2\e[1;33m)\e[m Panel Wireguard "
 echo -e   "   3\e[1;33m)\e[m Panel L2TP & PPTP Account"
-echo -e   "   4\e[1;33m)\e[m Panel SSTP  Account"
+echo -e   "   4\e[1;33m)\e[m Panel SSTP Account"
 echo -e   "   5\e[1;33m)\e[m Panel SSR & SS Account"
 echo -e   "   6\e[1;33m)\e[m Panel V2Ray"
 echo -e   "   7\e[1;33m)\e[m Panel VLess"
