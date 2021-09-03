@@ -40,7 +40,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "   \e[033;1mIPVPS:\e[0m $IPVPS"
 echo -e  ""
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "                           OPTION MENU\e[m" | lolcat 
+echo -e   "                          OPTION MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   1\e[1;33m)\e[m SSH & OpenVPN Menu"
 echo -e   "   2\e[1;33m)\e[m Panel Wireguard "
