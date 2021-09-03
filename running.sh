@@ -338,7 +338,7 @@ echo -e "Vless HTTP  : $status_nontls_vless"
 echo -e "SSR         : $status_ssr"
 echo -e "Shadowsocks : $status_sodosok"
 echo -e "Trojan      : $status_virus_trojan"
-echo -e "Trojan GO   : $status_trgo"
+#echo -e "Trojan GO   : $status_trgo"
 echo -e "Wireguard   : $status_wg"
 echo "------------------------------------------------------------------------" | lolcat 
 echo ""
