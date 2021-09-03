@@ -115,6 +115,7 @@ chmod +x add-l2tp
 
 sed -i -e 's/\r$//' add-l2tp
 
+clear
 echo " Successfully Update :" | lolcat
 echo " - Fix minor Bugs"
 echo ""
