@@ -69,6 +69,7 @@ wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/mai
 wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/auto-reboot.sh"
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/running.sh"
 wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
+wget -O add-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-l2tp.sh"
 
 chmod +x menu
 chmod +x l2tp
@@ -110,6 +111,7 @@ chmod +x swap
 chmod +x auto-reboot
 chmod +x running
 chmod +x update
+chmod +x add-l2tp
 
 sed -i -e 's/\r$//' add-l2tp
 
