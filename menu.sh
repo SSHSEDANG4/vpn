@@ -53,6 +53,8 @@ echo -e   "   20\e[1;33m)\e[m  Information Display System"
 echo -e   "   21\e[1;33m)\e[m  Info Script Auto Install"
 echo -e   "   22\e[1;33m)\e[m  Install BBR"
 echo -e   "   23\e[1;33m)\e[m  Auto Reboot"
+echo -e   "   24\e[1;33m)\e[m  Status All Service"
+echo -e   "   25\e[1;33m)\e[m  Change Banner"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
@@ -128,6 +130,12 @@ bbr
 ;;
 23)
 autoreboot
+;;
+24)
+running
+;;
+25)
+nano /etc/issue.net
 ;;
 x)
 exit
