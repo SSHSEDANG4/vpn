@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-cat /usr/bin/bannerku | lolcat
+figlet PANEL SSH | lolcat -d 5
 echo -e "\e[1;32m═════════════════════════════════════════\e[m" | lolcat
 echo -e "          \e[1;31m\e[1;31m═[\e[mSSH & OpenVPN Menu\e[1;31m]═\e[m" 
 echo -e "\e[1;32m═════════════════════════════════════════\e[m" | lolcat
