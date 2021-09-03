@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps| grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -13,9 +13,11 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-IP=$(wget -qO- icanhazip.com);
+IP=$(wget -qO- ifconfig.me/ip);
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+                 echo -e "Name : Create SSTP Account" | lolcat
+		 echo -e "==========================" | lolcat
 		read -rp "Usernew: " -e user
 		CLIENT_EXISTS=$(grep -w $user /var/lib/premium-script/data-user-sstp | wc -l)
 
@@ -35,14 +37,14 @@ echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
 clear
 cat <<EOF
 
-================================
-SSTP VPN
-
+Name : SSTP VPN
+=================================
 Server IP     : $IP
 Username      : $user
 Password      : $pass
 Port          : $sstp
 Cert          : http://$IP:81/server.crt
 Expired On    : $exp
-================================
+=================================
+Script By SSH SEDANG NETWORK
 EOF

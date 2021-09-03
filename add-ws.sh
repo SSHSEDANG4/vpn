@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -19,9 +19,12 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+                echo -e "Name : Create V2RAY Account"
+		echo -e "===============================" | lolcat
 		read -rp "User: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/v2ray/config.json | wc -l)
 
@@ -49,7 +52,7 @@ cat>/etc/v2ray/$user-tls.json<<EOF
       "net": "ws",
       "path": "/v2ray",
       "type": "none",
-      "host": "",
+      "host": "$domain",
       "tls": "tls"
 }
 EOF
@@ -64,7 +67,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       "net": "ws",
       "path": "/v2ray",
       "type": "none",
-      "host": "",
+      "host": "$domain",
       "tls": "none"
 }
 EOF
@@ -77,9 +80,11 @@ systemctl restart v2ray@none
 service cron restart
 clear
 echo -e ""
-echo -e "==========-V2RAY/VMESS-=========="
+echo -e "Name : V2RAY/VMESS"
+echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
+echo -e "ISP            : $ISP"
 echo -e "port TLS       : ${tls}"
 echo -e "port none TLS  : ${none}"
 echo -e "id             : ${uuid}"
@@ -87,9 +92,11 @@ echo -e "alterId        : 2"
 echo -e "Security       : auto"
 echo -e "network        : ws"
 echo -e "path           : /v2ray"
-echo -e "================================="
-echo -e "link TLS       : ${vmesslink1}"
-echo -e "================================="
-echo -e "link none TLS  : ${vmesslink2}"
-echo -e "================================="
+echo -e "=================================" | lolcat
+echo -e "Link TLS       : ${vmesslink1}"
+echo -e "=================================" | lolcat
+echo -e "Link None TLS  : ${vmesslink2}"
+echo -e "=================================" | lolcat
 echo -e "Expired On     : $exp"
+echo -e "=================================" | lolcat
+echo -e "Script By SSH SEDANG Network" | lolcat

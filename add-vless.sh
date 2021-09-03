@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -22,6 +22,8 @@ fi
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+                echo "Name : Create VLESS Account"
+		echo "============================" | lolcat
 		read -rp "User: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/v2ray/vless.json | wc -l)
 
@@ -44,7 +46,8 @@ systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
 clear
 echo -e ""
-echo -e "==========-V2RAY/VLESS-=========="
+echo -e "Name : V2RAY/VLESS "
+echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "port TLS       : $tls"
@@ -53,9 +56,11 @@ echo -e "id             : ${uuid}"
 echo -e "Encryption     : none"
 echo -e "network        : ws"
 echo -e "path           : /v2ray"
-echo -e "================================="
-echo -e "link TLS       : ${vlesslink1}"
-echo -e "================================="
-echo -e "link none TLS  : ${vlesslink2}"
-echo -e "================================="
+echo -e "=================================" | lolcat
+echo -e "Link TLS       : ${vlesslink1}"
+echo -e "=================================" | lolcat
+echo -e "Link None TLS  : ${vlesslink2}"
+echo -e "=================================" | lolcat
 echo -e "Expired On     : $exp"
+echo -e "=================================" | lolcat
+echo -e "Script By SSH SEDANG NETWORK"

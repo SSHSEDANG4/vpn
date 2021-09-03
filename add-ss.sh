@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -13,7 +13,7 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-IP=$(wget -qO- icanhazip.com);
+IP=$(wget -qO- ifconfig.me/ip);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
@@ -30,6 +30,8 @@ echo ""
 echo "Masukkan password"
 
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+                echo "Name : Create Shadowsocks Account"
+		echo "===========================" | lolcat
 		read -rp "Password: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/shadowsocks-libev/akun.conf | wc -l)
 
@@ -42,7 +44,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 read -p "Expired (hari): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 cat > /etc/shadowsocks-libev/$user-tls.json<<END
-{
+{   
     "server":"0.0.0.0",
     "server_port":$tls,
     "password":"$user",
@@ -88,15 +90,17 @@ port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
 	echo -e ""
-	echo -e "=======-Shadowsocks-======="
+	echo -e "Name : Shadowsocks"
+	echo -e "===========================" | lolcat
 	echo -e "IP/Host        : $IP"
 	echo -e "Port OBFS TLS  : $tls"
 	echo -e "Port OBFS HTTP : $http"
 	echo -e "Password       : $user"
 	echo -e "Method         : aes-256-cfb"
 	echo -e "Expired On     : $exp"
-	echo -e "==========================="
+	echo -e "===========================" | lolcat
 	echo -e "Link OBFS TLS  : $linkss1"
-	echo -e "==========================="
+	echo -e "===========================" | lolcat
 	echo -e "Link OBFS HTTP : $linkss2"
-	echo -e "==========================="
+	echo -e "===========================" | lolcat
+        echo -e "Script By SSH SEDANG NETWORK"

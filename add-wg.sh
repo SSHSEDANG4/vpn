@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -17,13 +17,15 @@ clear
 source /etc/wireguard/params
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-SERVER_PUB_IP=$(wget -qO- icanhazip.com);
+SERVER_PUB_IP=$(wget -qO- ifconfig.me/ip);
 else
 SERVER_PUB_IP=$IP
 fi
-	echo ""
+	echo "Name : Create Wireguard Account" 
+	echo "================================" | lolcat
 	echo "Tell me a name for the client."
 	echo "Use one word only, no special characters."
+	echo "================================" | lolcat
 
 	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Client name: " -e CLIENT_NAME
@@ -50,7 +52,7 @@ fi
 	CLIENT_DNS_1="176.103.130.130"
 
 	CLIENT_DNS_2="176.103.130.131"
-	MYIP=$(wget -qO- ifconfig.co);
+	MYIP=$(wget -qO- ifconfig.me/ip);
 	read -p "Expired (days): " masaaktif
 	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 
@@ -88,8 +90,11 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo Generate PresharedKey
 	clear
 	echo -e ""
-	echo -e "==========-Wireguard-=========="
+	echo -e "Name : Wireguard               " 
+	echo -e "===============================" | lolcat
 	echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf"
-	echo -e "==============================="
+	echo -e "===============================" | lolcat
 	echo -e "Expired On      : $exp"
+	echo -e "===============================" | lolcat
+	echo -e "Script By SSH SEDANG NETWORK"
 	rm -f /root/wg0-client-$CLIENT_NAME.conf

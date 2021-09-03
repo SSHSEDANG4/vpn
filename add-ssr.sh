@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -13,13 +13,16 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-IP=$(wget -qO- icanhazip.com);
+IP=$(wget -qO- ifconfig.me/ip);
+
+echo "Name : Create ShadowsocksR Account"
+echo "============================================" | lolcat
 echo "Please enter the username you want to set (do not repeat, does not support Chinese, will be reported incorrect!)"
 read -e -p "(Default: ):" ssr_user
 CLIENT_EXISTS=$(grep -w $ssr_user /usr/local/shadowsocksr/akun.conf | wc -l)
 if [[ ${CLIENT_EXISTS} == '1' ]]; then
 echo ""
-echo "A client with the specified name was already created, please choose another name."
+echo "A client with the specified name was already created, please choose another name." | lolcat
 exit 1
 fi
 read -p "Expired (days): " masaaktif
@@ -50,9 +53,13 @@ tmp2=$(echo -n "$IP:${ssr_port}:${ssr_protocol}:${ssr_method}:${SSRobfs}:${tmp1}
 ssr_link="ssr://${tmp2}"
 /etc/init.d/ssrmu restart
 service cron restart
-IP=$(wget -qO- ifconfig.co);
-clear && echo && echo "===================================================" && echo
-echo -e " User [${ssr_user}] configuration info："
+IP=$(wget -qO- ifconfig.me/ip);
+echo -e ""
+echo -e ""
+clear && echo && echo "" && echo  | lolcat
+echo -e " Name : ShadowsocksR" | lolcat
+echo -e " ===================================================" | lolcat
+echo -e " User [${ssr_user}] configuration info：" | lolcat
 echo -e " IP            : ${IP}"
 echo -e " Port          : ${ssr_port}"
 echo -e " Password      : ${ssr_password}"
@@ -61,6 +68,7 @@ echo -e " Protocol      : ${Red_font_prefix}${ssr_protocol}"
 echo -e " Obfs          : ${Red_font_prefix}${ssr_obfs}"
 echo -e " Device limit  : ${ssr_protocol_param}"
 echo -e " Expired On    : ${exp} "
-echo -e " ==================================================="
+echo -e " ===================================================" | lolcat
 echo -e " Link SSR      : ${ssr_link}"
-echo -e " ==================================================="
+echo -e " ===================================================" | lolcat
+echo -e " Script By SSH SEDANG NETWORK"
