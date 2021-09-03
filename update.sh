@@ -11,11 +11,11 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
-versi=$(cat /home/ver)
-if [[ $versi == 1.3 ]]; then
-echo "You Have The Latest Version"
-exit 0
-fi
+#versi=$(cat /home/ver)
+#if [[ $versi == 1.3 ]]; then
+#echo "You Have The Latest Version"
+#exit 0
+#fi
 echo "Start Update"
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/menu.sh"
@@ -105,10 +105,10 @@ chmod +x auto-reboot
 chmod +x running
 chmod +x update
 
-echo "0 5 * * * root clear-log && reboot" > /etc/crontab
-echo "0 0 * * * root xp" > /etc/crontab
-cd
-echo "1.3" > /home/ver
+#echo "0 5 * * * root clear-log && reboot" > /etc/crontab
+#echo "0 0 * * * root xp" > /etc/crontab
+#cd
+#echo "1.3" > /home/ver
 clear
 echo " Fix minor Bugs"
 echo " Reboot 5 Sec"
