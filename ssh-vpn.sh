@@ -110,7 +110,9 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-
+echo "echo Script Premium By SSH Sedang Network" >> .profile
+echo "echo Contact : wa.me/6282311190332" >> .profile
+echo "echo Silahkan Ketik Menu Untuk Melihat daftar Perintah" >> .profile
 
 # install webserver
 apt -y install nginx
