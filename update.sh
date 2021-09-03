@@ -37,7 +37,7 @@ wget -O speedtest "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/speedte
 wget -O info "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/info.sh"
 wget -O ram "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps"
+wget -O autokill "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/tendang.sh"
 wget -O clear-log "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/clear-log.sh"
@@ -51,8 +51,6 @@ wget -O port-squid "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-s
 wget -O port-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws.sh"
 wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-vless.sh"
 wget -O wbmn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/xp.sh"
-wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/swapkvm.sh"
 wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/user-limit.sh && chmod +x /usr/bin/user-limit
 wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/auto-reboot.sh"
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/running.sh"
@@ -95,7 +93,6 @@ chmod +x port-squid
 chmod +x port-ws
 chmod +x port-vless
 chmod +x wbmn
-chmod +x xp
 chmod +x swap
 chmod +x auto-reboot
 chmod +x running
