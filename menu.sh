@@ -42,14 +42,14 @@ echo -e  ""
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "                          OPTION MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "   1\e[1;33m)\e[m SSH & OpenVPN Menu"
-echo -e   "   2\e[1;33m)\e[m Panel Wireguard "
-echo -e   "   3\e[1;33m)\e[m Panel L2TP & PPTP Account"
-echo -e   "   4\e[1;33m)\e[m Panel SSTP Account"
-echo -e   "   5\e[1;33m)\e[m Panel SSR & SS Account"
-echo -e   "   6\e[1;33m)\e[m Panel V2Ray"
-echo -e   "   7\e[1;33m)\e[m Panel VLess"
-echo -e   "   8\e[1;33m)\e[m Panel Trojan"
+echo -e   "   1\e[1;33m)\e[m  SSH & OpenVPN Menu"
+echo -e   "   2\e[1;33m)\e[m  Panel Wireguard "
+echo -e   "   3\e[1;33m)\e[m  Panel L2TP & PPTP Account"
+echo -e   "   4\e[1;33m)\e[m  Panel SSTP Account"
+echo -e   "   5\e[1;33m)\e[m  Panel SSR & SS Account"
+echo -e   "   6\e[1;33m)\e[m  Panel V2Ray"
+echo -e   "   7\e[1;33m)\e[m  Panel VLess"
+echo -e   "   8\e[1;33m)\e[m  Panel Trojan"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "                          SYSTEM MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
