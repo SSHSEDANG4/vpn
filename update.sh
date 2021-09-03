@@ -23,8 +23,6 @@ wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/l2tp.sh"
 wget -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssh.sh"
 wget -O ssssr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssssr.sh"
 wget -O sstpp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/sstpp.sh"
-#wget -O trojaan "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/trojaan.sh"
-#wget -O trojanGO "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/trojanGO.sh"
 wget -O v2raay "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/v2raay.sh"
 wget -O wgr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/wgr.sh"
 wget -O vleess "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/vleess.sh"
@@ -50,7 +48,7 @@ wget -O clear-log "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/clear-l
 wget -O change-port "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/change.sh"
 wget -O port-ovpn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ovpn.sh"
 wget -O port-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps"
+wget -O port-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-wg.sh"
 wget -O port-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-tr.sh"
 wget -O port-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-sstp.sh"
 wget -O port-squid "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-squid.sh"
@@ -62,24 +60,14 @@ wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/swapkvm.sh"
 wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/user-limit.sh && chmod +x /usr/bin/user-limit
 wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/auto-reboot.sh"
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/running.sh"
-wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/update.sh"
-wget -O cfd "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cfd.sh"
-wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cff.sh"
-wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cfh.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/add-trgo.sh"
-wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/xp-trgo.sh
-wget -O cek-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/cek-trgo.sh"
-wget -O renew-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/renew-trgo.sh"
-wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/port-trgo.sh"
-wget -O /usr/bin/del-trgo https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo && chmod +x /usr/bin/del-trgo
+wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
+
 chmod +x menu
 chmod +x l2tp
 chmod +x ssh
 chmod +x ssssr
 chmod +x sstpp
-chmod +x trojaan
-#chmod +x trojanGO
-#chmod +x v2raay
+chmod +x v2raay
 chmod +x wgr
 chmod +x vleess
 chmod +x bbr
@@ -116,16 +104,7 @@ chmod +x swap
 chmod +x auto-reboot
 chmod +x running
 chmod +x update
-chmod +x cfd
-chmod +x cff
-chmod +x cfh
-chmod +x add-trgo
-chmod +x xp-trgo
-chmod +x cek-trgo
-chmod +x renew-trgo
-chmod +x port-trgo
-dos2unix trojanGO
-dos2unix del-trgo
+
 echo "0 5 * * * root clear-log && reboot" > /etc/crontab
 echo "0 0 * * * root xp" > /etc/crontab
 cd
