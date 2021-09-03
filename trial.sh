@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -13,7 +13,14 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-IP=$(wget -qO- icanhazip.com);
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/v2ray/domain)
+else
+domain=$IP
+fi
+IP=$(wget -qO- ifconfig.co);
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
@@ -36,19 +43,29 @@ useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "Informasi Trial SSH & OpenVPN"
-echo -e "Username       : $Login "
-echo -e "Password       : $Pass"
-echo -e "==============================="
-echo -e "Host           : $IP"
-echo -e "OpenSSH        : 22"
-echo -e "Dropbear       : 109, 143"
-echo -e "SSL/TLS        :$ssl"
-echo -e "Port Squid     :$sqd"
-echo -e "OpenVPN        : TCP $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
-echo -e "OpenVPN        : UDP $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
-echo -e "OpenVPN        : SSL 442 http://$IP:81/client-tcp-ssl.ovpn"
-echo -e "badvpn         : 7100-7300"
-echo -e "==============================="
-echo -e "Aktif Sampai   : $exp"
-
+echo -e "Name : Trial SSH , WebSocket, OpenVPN"
+echo -e "===============================" | lolcat
+echo -e "Username      : $Login "
+echo -e "Password      : $Pass"
+echo -e "Expired On    : $exp"
+echo -e "===============================" | lolcat
+echo -e "ISP           : $ISP"
+echo -e "Host          : $IP"
+echo -e "Domain        : $domain"
+echo -e "OpenSSH       : 22"
+echo -e "Dropbear      : 109, 143"
+echo -e "SSL/TLS       :$ssl"
+echo -e "WS SSL        : 443"
+echo -e "WS Non SSL    : 2082"
+echo -e "WS Ovpn       : 2086"
+echo -e "Port Squid    :$sqd"
+echo -e "Badvpn Udpgw  : 7100-7300"
+echo -e "===============================" | lolcat
+echo -e "OpenVPN TCP   : $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
+echo -e "OpenVPN UDP   : $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
+echo -e "OpenVPN SSL   : 442  http://$IP:81/client-tcp-ssl.ovpn"
+echo -e "===============================" | lolcat
+echo -e "[PAYLOAD SSH WS]"
+echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "===============================" | lolcat
+echo -e "Script By SSH SEDANG NETWORK"
