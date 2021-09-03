@@ -48,7 +48,6 @@ wget -O member "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/member.sh"
 wget -O delete "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/delete.sh"
 wget -O cek "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek.sh"
 wget -O restart "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/info.sh"
 wget -O ram "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew.sh"
@@ -89,7 +88,6 @@ chmod +x member
 chmod +x delete
 chmod +x cek
 chmod +x restart
-chmod +x speedtest
 chmod +x info
 chmod +x about
 chmod +x autokill
