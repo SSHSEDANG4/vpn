@@ -11,10 +11,13 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
-
+clear
 echo "Starting Update" | lolcat
-echo "...................." | lolcat
+echo "" | lolcat
+echo "................." | lolcat
+# update
 cd /usr/bin
+
 wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/menu.sh"
 wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/l2tp.sh"
 wget -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssh.sh"
@@ -99,10 +102,14 @@ chmod +x auto-reboot
 chmod +x running
 chmod +x update
 
-clear
-echo " Fix minor Bugs" | lolcat
-echo " Reboot 5 Sec" | lolcat
-echo "...................." | lolcat
+sed -i -e 's/\r$//' add-l2tp
+
+echo " Successfully Update :" | lolcat
+echo " - Fix minor Bugs"
+echo ""
+echo " Rebooting in 5 Sec"
+echo "" | lolcat
+echo " ................." | lolcat
 sleep 5
 rm -f update.sh
 reboot
