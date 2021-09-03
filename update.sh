@@ -69,7 +69,6 @@ wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/mai
 wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/auto-reboot.sh"
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/running.sh"
 wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
-wget -O add-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-l2tp.sh"
 wget -O add-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-wg.sh"
 wget -O del-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-wg.sh"
 wget -O cek-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-wg.sh"
@@ -145,12 +144,11 @@ chmod +x swap
 chmod +x auto-reboot
 chmod +x running
 chmod +x update
-chmod +x add-l2tp && sed -i -e 's/\r$//' add-l2tp
 chmod +x add-wg
 chmod +x del-wg
 chmod +x cek-wg
 chmod +x renew-wg
-chmod +x add-l2tp
+chmod +x add-l2tp && sed -i -e 's/\r$//' add-l2tp
 chmod +x del-l2tp
 chmod +x add-pptp
 chmod +x del-pptp
