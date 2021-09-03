@@ -341,4 +341,4 @@ echo -e "Trojan      : $status_virus_trojan"
 #echo -e "Trojan GO   : $status_trgo"
 echo -e "Wireguard   : $status_wg"
 echo "------------------------------------------------------------------------" | lolcat 
-echo ""
+echo "Script By SSH SEDANG NETWORK"
