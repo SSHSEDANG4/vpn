@@ -56,6 +56,7 @@ echo -e   "   23\e[1;33m)\e[m  Auto Reboot"
 echo -e   "   24\e[1;33m)\e[m  Status All Service"
 echo -e   "   25\e[1;33m)\e[m  Change Banner"
 echo -e   "   26\e[1;33m)\e[m  Update To Last Version"
+echo -e   "   27\e[1;33m)\e[m  Clear Log"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
@@ -137,6 +138,12 @@ running
 ;;
 25)
 nano /etc/issue.net
+;;
+26)
+menu
+;;
+27)
+clear-log
 ;;
 x)
 exit
