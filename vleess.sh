@@ -1,6 +1,7 @@
 #!/bin/bash
 clear
-cat /usr/bin/bannerku | lolcat
+echo -e ""
+figlet Panel Vless | lolcat
 echo -e "\e[1;32m════════════════════════════════════════\e[m" | lolcat
 echo -e "             \e[1;31m\e[1;31m═[\e[mV2Ray Vless\e[1;31m]═\e[m" 
 echo -e "\e[1;32m════════════════════════════════════════\e[m" | lolcat
