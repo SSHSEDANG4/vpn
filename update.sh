@@ -70,11 +70,6 @@ wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/auto-
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/running.sh"
 wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
 wget -O add-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-l2tp.sh"
-wget -q "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/zero"
-wget -q -O menu "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/menu.sh"
-wget -q -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssh.sh"
-wget -q -O wgr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/wgr.sh"
-wget -q -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/l2tp"
 
 chmod +x menu
 chmod +x l2tp
