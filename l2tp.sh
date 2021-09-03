@@ -1,6 +1,7 @@
 #!/bin/bash
 clear
-cat /usr/bin/bannerku | lolcat
+echo -e ""
+figlet   L2tp + Pptp | lolcat
 echo -e "\e[1;32m═══════════════════════════════════════\e[m" | lolcat
 echo -e "         \e[1;31m\e[1;31m═[\e[mL2TP & PPTP Account\e[1;31m]═\e[m" 
 echo -e "\e[1;32m═══════════════════════════════════════\e[m" | lolcat
