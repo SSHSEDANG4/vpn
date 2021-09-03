@@ -51,7 +51,7 @@ chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-l2tp"
 cat <<EOF
 
-L2TP/IPSEC PSK VPN
+Name : L2TP/IPSEC PSK VPN
 ================================
 Server IP    : $PUBLIC_IP
 IPsec PSK    : myvpn
