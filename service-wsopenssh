@@ -1,5 +1,5 @@
 [Unit]
-Description=Websocket-OpenSSH By Zerovpn
+Description=Websocket-OpenSSH By SSH SEDANG
 Documentation=https://google.com
 After=network.target nss-lookup.target
 
