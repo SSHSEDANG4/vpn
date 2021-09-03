@@ -2,22 +2,15 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
-echo "Only For Premium Users"
-exit 0
-fi
+clear
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[Installed]${Font_color_suffix}"
 Error="${Red_font_prefix}[Not Installed]${Font_color_suffix}"
 cek=$(netstat -ntlp | grep 10000 | awk '{print $7}' | cut -d'/' -f2)
 function install () {
-IP=$(wget -qO- ifconfig.co);
+IP=$(wget -qO- ifconfig.me/ip);
 echo " Adding Repositori Webmin"
 sh -c 'echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list.d/webmin.list'
 apt install gnupg gnupg1 gnupg2 -y
@@ -33,9 +26,9 @@ sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 rm -f /root/jcameron-key.asc
 clear
 echo ""
-echo " Done Install Webmin"
+echo " Done Install Webmin" | lolcat
 echo " $IP:10000"
-echo " AutoScriptVPS By  ZeroVpn"
+echo " AutoScriptVPS By SSH SEDANG"
 }
 function restart () {
 echo " Restarting Webmin"
@@ -45,7 +38,7 @@ echo " Start Uninstall Webmin"
 clear
 echo ""
 echo " Done Restart Webmin"
-echo " AutoScriptVPS By  ZeroVpn"
+echo " AutoScriptVPS By SSH SEDANG" | lolcat
 }
 function uninstall () {
 echo " Removing Repositori Webmin"
@@ -58,7 +51,7 @@ apt autoremove --purge webmin -y > /dev/null 2>&1
 clear
 echo ""
 echo " Done Uninstall Webmin"
-echo " AutoScriptVPS By  ZeroVpn"
+echo " AutoScriptVPS By SSH SEDANG" | lolcat
 }
 if [[ "$cek" = "perl" ]]; then
 sts="${Info}"
@@ -67,13 +60,13 @@ sts="${Error}"
 fi
 clear
 echo -e " =============================="
-echo -e "           Webmin Menu         "
+echo -e "           Webmin Menu         " | lolcat
 echo -e " =============================="
 echo -e " Status $sts"
 echo -e "  1. Install Webmin"
 echo -e "  2. Restart Webmin"
 echo -e "  3. Uninstall Webmin"
-echo -e " AutoScriptVPS By  Horasss"
+echo -e " AutoScriptVPS By SSH SEDANG" | lolcat
 echo -e " Press CTRL+C to return"
 read -rp " Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
@@ -84,6 +77,6 @@ elif [[ "$num" = "3" ]]; then
 uninstall
 else
 clear
-echo " You Entered The Wrong Number"
+echo " You Entered The Wrong Number" | lolcat
 menu
 fi
