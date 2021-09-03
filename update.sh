@@ -70,6 +70,36 @@ wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/auto-
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/running.sh"
 wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
 wget -O add-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-l2tp.sh"
+wget -O add-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-wg.sh"
+wget -O add-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-l2tp.sh"
+wget -O del-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-l2tp.sh"
+wget -O add-pptp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-pptp.sh"
+wget -O del-pptp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-pptp.sh"
+wget -O cek-pptp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-pptp.sh"
+wget -O renew-pptp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-pptp.sh"
+wget -O renew-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-l2tp.sh"
+wget -O add-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-ss.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-ss.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ss.sh"
+wget -O add-ssr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-ssr.sh"
+wget -O del-ssr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-ssr.sh"
+wget -O renew-ssr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ssr.sh"
+wget -O add-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-tr.sh"
 
 chmod +x menu
 chmod +x l2tp
@@ -112,6 +142,34 @@ chmod +x auto-reboot
 chmod +x running
 chmod +x update
 chmod +x add-l2tp && sed -i -e 's/\r$//' add-l2tp
+chmod +x add-wg
+chmod +x del-wg
+chmod +x cek-wg
+chmod +x renew-wg
+chmod +x add-l2tp
+chmod +x del-l2tp
+chmod +x add-pptp
+chmod +x del-pptp
+chmod +x cek-pptp
+chmod +x add-ss
+chmod +x del-ss
+chmod +x cek-ss
+chmod +x renew-ss
+chmod +x add-ssr
+chmod +x del-ssr
+chmod +x renew-ssr
+chmod +x add-ws
+chmod +x add-vless
+chmod +x add-tr
+chmod +x del-ws
+chmod +x del-vless
+chmod +x del-tr
+chmod +x cek-ws
+chmod +x cek-vless
+chmod +x cek-tr
+chmod +x renew-ws
+chmod +x renew-vless
+chmod +x renew-tr
 
 clear
 echo " Successfully Update :" | lolcat
