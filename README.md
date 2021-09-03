@@ -1,7 +1,7 @@
 # SSH SEDANG NETWORK
 Association By Zero VPN
 
-# Autoscript
+# Script
 
 Step 1 : <br>
 ```shell
