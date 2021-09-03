@@ -38,7 +38,9 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "   \e[032;1mTime:\e[0m $WKT"
 	echo -e "   \e[033;1mIPVPS:\e[0m $IPVPS"
 echo -e  ""
-echo -e  "   -------------------------MENU OPTIONS------------------------" | lolcat
+echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
+echo -e   "                             OPTION MENU\e[m" | lolcat 
+echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   1\e[1;33m)\e[m SSH & OpenVPN Menu"
 echo -e   "   2\e[1;33m)\e[m Panel Wireguard "
 echo -e   "   3\e[1;33m)\e[m Panel L2TP & PPTP Account"
@@ -50,7 +52,7 @@ echo -e   "   8\e[1;33m)\e[m Panel Trojan"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "                             SYSTEM MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "   9\e[1;33m)\e[m  Add Subdomain Host For VPS"
+echo -e   "   9\e[1;33m)\e[m   Add Subdomain Host For VPS"
 echo -e   "   10\e[1;33m)\e[m  Renew Certificate V2RAY"
 echo -e   "   11\e[1;33m)\e[m  Change Port All Account"
 echo -e   "   12\e[1;33m)\e[m  Autobackup Data VPS"
@@ -73,7 +75,7 @@ echo -e   "  \e[1;32m-----------------------------------------------------------
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   ""
-read -p "     Select From Options [1-29 or x] :  " menu
+read -p "     Select From Options [1-27 or x] :  " menu
 echo -e   ""
 case $menu in
 1)
