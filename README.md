@@ -11,23 +11,23 @@ Step 2 : <br><br>
 rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils wget screen curl && wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
 ```
 # service
--OpenSSH
--OpenVPN
--Stunnel4
--Dropbear
--Squid Proxy
--Badvpn
--OHP
--Nginx
--Wireguard
--L2TP/IPSEC VPN
--PPTP VPN
--SSTP VPN
--Shadowsocks-R
--SS-OBFS TLS
--SS-OBFS HTTP
--V2RAY Vmess TLS
--V2RAY Vmess None TLS
--V2RAY Vless TLS
--V2RAY Vless None TLS
--Trojan
+-OpenSSH <br>
+-OpenVPN <br>
+-Stunnel4 <br>
+-Dropbear <br>
+-Squid Proxy <br>
+-Badvpn <br>
+-OHP <br>
+-Nginx <br>
+-Wireguard <br>
+-L2TP/IPSEC VPN <br>
+-PPTP VPN <br>
+-SSTP VPN <br>
+-Shadowsocks-R <br>
+-SS-OBFS TLS <br>
+-SS-OBFS HTTP <br>
+-V2RAY Vmess TLS <br>
+-V2RAY Vmess None TLS <br>
+-V2RAY Vless TLS <br>
+-V2RAY Vless None TLS <br>
+-Trojan <br>
