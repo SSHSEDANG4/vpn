@@ -40,7 +40,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "   \e[033;1mIPVPS:\e[0m $IPVPS"
 echo -e  ""
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "                             OPTION MENU\e[m" | lolcat 
+echo -e   "                           OPTION MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   1\e[1;33m)\e[m SSH & OpenVPN Menu"
 echo -e   "   2\e[1;33m)\e[m Panel Wireguard "
@@ -51,7 +51,7 @@ echo -e   "   6\e[1;33m)\e[m Panel V2Ray"
 echo -e   "   7\e[1;33m)\e[m Panel VLess"
 echo -e   "   8\e[1;33m)\e[m Panel Trojan"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "                             SYSTEM MENU\e[m" | lolcat 
+echo -e   "                          SYSTEM MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   9\e[1;33m)\e[m   Add Subdomain Host For VPS"
 echo -e   "   10\e[1;33m)\e[m  Renew Certificate V2RAY"
