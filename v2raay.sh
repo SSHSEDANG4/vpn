@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-cat /usr/bin/bannerku | lolcat
+figlet PANEL V2RAY | lolcat
 echo -e "\e[1;32m═══════════════════════════════════════\e[m" | lolcat
 echo -e "          \e[1;31m\e[1;31m═[\e[mAll Account V2Ray\e[1;31m]═\e[m" 
 echo -e "\e[1;32m═══════════════════════════════════════\e[m" | lolcat
