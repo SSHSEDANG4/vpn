@@ -1,4 +1,4 @@
-kimochi vpn
+kimochi vpn x zero vpn
 
 # autoscript
 
@@ -10,3 +10,24 @@ Step 2 : <br><br>
 ```shell
 rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils wget screen curl && wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
 ```
+# service
+-OpenSSH
+-OpenVPN
+-Stunnel4
+-Dropbear
+-Squid Proxy
+-Badvpn
+-OHP
+-Nginx
+-Wireguard
+-L2TP/IPSEC VPN
+-PPTP VPN
+-SSTP VPN
+-Shadowsocks-R
+-SS-OBFS TLS
+-SS-OBFS HTTP
+-V2RAY Vmess TLS
+-V2RAY Vmess None TLS
+-V2RAY Vless TLS
+-V2RAY Vless None TLS
+-Trojan
