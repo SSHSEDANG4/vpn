@@ -3,6 +3,18 @@ yl='\e[031;1m'
 bl='\e[36;1m'
 gl='\e[32;1m'
 
+MYIP=$(wget -qO- icanhazip.com);
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Permission Accepted...${NC}"
+else
+echo -e "${red}Permission Denied!${NC}";
+echo "Please Contact Admin"| lolcat
+echo "Telegram : t.me/sshsedang4"
+echo "Whatsapp : 082311190332"
+exit 0
+fi
+
 clear 
 cat /usr/bin/bannerku | lolcat
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
