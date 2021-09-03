@@ -1,4 +1,5 @@
-kimochi vpn x zero vpn
+# SSH SEDANG NETWORK
+Association By Zero VPN
 
 # autoscript
 
