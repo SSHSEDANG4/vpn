@@ -31,7 +31,7 @@ echo "Masukkan password"
 
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
                 echo "Name : Create Shadowsocks Account"
-		echo "===========================" | lolcat
+		echo "=================================" | lolcat
 		read -rp "Password: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/shadowsocks-libev/akun.conf | wc -l)
 
