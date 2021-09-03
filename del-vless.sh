@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -16,15 +16,19 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/v2ray/vless.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
+		echo "Name : Delete V2RAY/VLESS Account"		
+		echo "=================================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
+	echo " Name : Delete V2RAY/VLESS Account"			
+	echo " ================================" | lolcat	
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " ================================" | lolcat	
 	echo "     No  Expired   User"
 	grep -E "^### " "/etc/v2ray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -42,7 +46,8 @@ systemctl restart v2ray@vless
 systemctl restart v2ray@none
 clear
 echo " Vless Account Deleted Successfully"
-echo " =========================="
+echo " ==========================" | lolcat	
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " ==========================" | lolcat	
+echo " Script By SSH SEDANG NETWORK"

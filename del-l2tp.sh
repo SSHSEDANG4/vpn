@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -17,14 +17,18 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-l2tp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
+		echo "Name : Delete L2TP Account" | lolcat
+		echo ""
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	echo ""
+	echo " Name : Delete L2TP Account"
+	echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/var/lib/premium-script/data-user-l2tp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -46,7 +50,8 @@ sed -i "/^### $VPN_USER $exp/d" /var/lib/premium-script/data-user-l2tp
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 clear
 echo " L2TP Account Has Been Successfully Deleted"
-echo " =========================="
+echo " ============================" | lolcat
 echo " Client Name : $VPN_USER"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"

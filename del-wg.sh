@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps?token=AVIBESYXEVQJ22UELRCJTQLBE6CJS | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -18,16 +18,19 @@ source /etc/wireguard/params
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
+		echo "Name : Delete Wireguard Account"
+		echo "===============================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo ""
+	echo " Name : Delete Wireguard Account"
+	echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -52,8 +55,9 @@ source /etc/wireguard/params
 	systemctl restart "wg-quick@$SERVER_WG_NIC"
 	service cron restart
 clear
-echo " Wireguard Account Deleted Successfully"
-echo " =========================="
+echo " Wireguard Account Deleted Successfully" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired  On : $exp"
-echo " =========================="
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"

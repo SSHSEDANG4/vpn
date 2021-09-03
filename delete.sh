@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -14,7 +14,7 @@ exit 0
 fi
 clear
                hariini=`date +%d-%m-%Y`
-               echo "Thank you for removing the EXPIRED USERS"
+               echo "Thank you for removing the EXPIRED USERS" | lolcat
                echo "--------------------------------------"
                cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
                totalaccounts=`cat /tmp/expirelist.txt | wc -l`
@@ -24,7 +24,7 @@ clear
                username=`echo $tuserval | cut -f1 -d:`
                userexp=`echo $tuserval | cut -f2 -d:`
                userexpireinseconds=$(( $userexp * 86400 ))
-               tglexp=`date -d @$userexpireinseconds`
+               tglexp=`date -d @$userexpireinseconds`             
                tgl=`echo $tglexp |awk -F" " '{print $3}'`
                while [ ${#tgl} -lt 2 ]
                do

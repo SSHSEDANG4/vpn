@@ -2,9 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -17,15 +17,19 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-sstp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
+		echo "Name : Renew SSTP Account"
+		echo "===============================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo "Select the existing client you want to renew"
+	echo " Name : Renew SSTP Account"
+	echo "===============================" | lolcat
+	echo " Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "===============================" | lolcat
 	grep -E "^### " "/var/lib/premium-script/data-user-sstp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -46,8 +50,9 @@ exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
 sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/premium-script/data-user-sstp
 clear
 echo ""
-echo " SSTP Account Has Been Successfully Renewed"
-echo " =========================="
+echo " SSTP Account Has Been Successfully Renewed" 
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " =========================="
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
