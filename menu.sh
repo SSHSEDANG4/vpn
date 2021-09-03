@@ -155,7 +155,7 @@ running
 nano /etc/issue.net
 ;;
 26)
-menu
+update
 ;;
 27)
 clear-log
