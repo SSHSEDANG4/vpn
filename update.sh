@@ -12,7 +12,8 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
 
-echo "Start Update"
+echo "Starting Update" | lolcat
+echo "...................." | lolcat
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/menu.sh"
 wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/l2tp.sh"
@@ -99,8 +100,9 @@ chmod +x running
 chmod +x update
 
 clear
-echo " Fix minor Bugs"
-echo " Reboot 5 Sec"
+echo " Fix minor Bugs" | lolcat
+echo " Reboot 5 Sec" | lolcat
+echo "...................." | lolcat
 sleep 5
 rm -f update.sh
 reboot
