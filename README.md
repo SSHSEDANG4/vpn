@@ -17,7 +17,6 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 - Dropbear <br>
 - Squid Proxy <br>
 - Badvpn <br>
-- OHP <br>
 - Nginx <br>
 - Wireguard <br>
 - L2TP/IPSEC VPN <br>
