@@ -19,8 +19,8 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user sshsedang@gmai.com
-from sshsedang@gmai.com
+user sshsedang@gmail.com
+from sshsedang@gmail.com
 password 13OktobeR
 logfile ~/.msmtp.log
 EOF
