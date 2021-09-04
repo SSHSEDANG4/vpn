@@ -32,6 +32,6 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 - V2RAY Vless None TLS <br>
 - Trojan <br>
 
-# Os Supported
+# OS Supported
 - Debian 9 & Debian 10 <br>
 - Ubuntu 18 & Ubuntu 20 <br>
