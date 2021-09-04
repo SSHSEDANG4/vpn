@@ -33,8 +33,8 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 - Trojan <br>
 
 # OS Supported
-- Debian 9 & Debian 10 <br>
-- Ubuntu 18 & Ubuntu 20 <br>
+- Debian 9 & Debian 10 64-bit <br>
+- Ubuntu 18 & Ubuntu 20 64-bit <br>
 
 # Contact
 - Whatsapp : wa.me/6282311190332 <br>
