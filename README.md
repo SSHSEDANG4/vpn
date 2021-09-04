@@ -35,3 +35,7 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 # OS Supported
 - Debian 9 & Debian 10 <br>
 - Ubuntu 18 & Ubuntu 20 <br>
+
+# Contact
+- Whatsapp : wa.me/6282311190332 <br>
+- Telegram : t.me/sshsedang4 <br>
