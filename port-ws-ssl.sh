@@ -34,7 +34,7 @@ fi
 cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
 sed -i "s/$ssl/$stl/g" /etc/stunnel/stunnel.conf
-sed -i "s/   - Websocket SSL           : $ssl, $ssl/g" /root/log-install.txt
+sed -i "s/   - Websocket SSL           : $ssl/   - Websocket SSL           : $stl, $ssl/g" /root/log-install.txt
 /etc/init.d/stunnel4 restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
