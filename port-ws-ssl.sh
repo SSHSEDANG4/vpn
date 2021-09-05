@@ -13,19 +13,20 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 4 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $4}')"
+ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $4}')"
 echo -e "======================================" | lolcat
 echo -e "Name : Change Port Websocket SSL"
 echo -e ""
 echo -e "     [1]  Change Port $ssl"
 echo -e "     [x]  Exit"
+echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
 read -p "     Select From Options [1 or x] :  " prot
 echo -e ""
 case $prot in
 1)
-read -p "New Port Websocket SSL : " stl
+read -p "New Port Stunnel4: " stl
 if [ -z $stl ]; then
 echo "Please Input Port"
 exit 0
@@ -33,7 +34,7 @@ fi
 cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
 sed -i "s/$ssl/$stl/g" /etc/stunnel/stunnel.conf
-sed -i "s/   - Websocket SSL           : $ssl/   - Websocket SSL           : $stl, $ssl/g" /root/log-install.txt
+sed -i "s/   - Websocket SSL           : $ssl, $ssl/g" /root/log-install.txt
 /etc/init.d/stunnel4 restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
