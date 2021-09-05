@@ -26,7 +26,7 @@ read -p "     Select From Options [1 or x] :  " prot
 echo -e ""
 case $prot in
 1)
-read -p "New Port Stunnel4: " stl
+read -p "New Port Websocket SSL: " stl
 if [ -z $stl ]; then
 echo "Please Input Port"
 exit 0
