@@ -6,7 +6,7 @@ clear
 echo -e "Name : Change Port All Service"
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Change Port Stunnel4" 
+echo -e "     [1]  Change Port Stunnel4 / SSL Websocket" 
 echo -e "     [2]  Change Port OpenVPN" 
 echo -e "     [3]  Change Port Wireguard" 
 echo -e "     [4]  Change Port Vmess"
