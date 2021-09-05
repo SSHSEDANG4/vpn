@@ -16,7 +16,7 @@ clear
 ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $1}')"
 ssl2="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $2}')"
 echo -e "======================================" | lolcat
-echo -e "Name : Change Port Stunnel"
+echo -e "Name : Change Port Stunnel4 / SSL Websocket"
 echo -e ""
 echo -e "     [1]  Change Port $ssl"
 echo -e "     [2]  Change Port $ssl2"
