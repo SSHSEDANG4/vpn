@@ -1,4 +1,449 @@
 #!/bin/bash
+#
+# ==================================================
 
-God="BlessYou";krF=FoL;Gnr=Vl;QIy=Is;UOt=FC;kVE=Sk;KlM=gM;Xwe=TF;oTX=dD;Yox=Qa;wQx=mb;Kqb=Zy;xWU=twB;gTp=auw;hwZ=Ejp;tHg=iQZ;ojo=shb;jhw=FjF;IDL=klV;wOA=yFT;PZL=XfL;DRJ=DiE;bmJ=FCa;XGN=dOT;QCK=dkY;SOb=WJE;RJx=uAv;czJ=dts;VGB=oCy;TyO=xGj;yHU=bpq;Nfb=Wct;doQ=Ibf;XCL=rax;ZNH=Hhf;Eoh=yCU;ghd=hut;ooz=VKY;qMf=PrY;Ecf=Lke;BbJ=jie;QOI=lOT;oi=QkU;yM=iDO;rT=twI;wa=BEk;Lf=SGl;Sx=Kri;yL=RiF;Xf=iZT;iv=fpC;fW=nki;qX=FrL;ba=OUY;czP=Hdm;ecN=WKt;QMW=BnB;Nsq=jdC;nof=OZt;bhx=qNV;vVN=xaU;smp=Wta;ceY=GDh;AIB=juO;miA=Cso;zgz=Hka;Kea=YMq;hUp=SWY;zMP=ozk;WGK=JEt;pkF=jjF;FCq=pFs;ZrQ=VcQ;ZjS=do;BTP=Su;sly=xM;aZl=vF;iJn=bo;QCl=HB;SCO=xo;fUq=Jo;Epq=zc;wxq=Ev;ziJ=Gx;Kzo=JF;PDO=pJ;qhq=yp;OYk=rj;OGy=Cc;hSK=xR;lnD=um;UXi=pl;xBF=xP;qOD=iX;RVy=nl;mqe=JK;rQt=CA;qJD=FR;sPp=XZ;moh=DC;Fsj=GWh;NTx=Jnx;dwG=ncr;Ugd=mFV;ZTt=WjI;mFG=lms;YGK=bPI;UKs=ibv;hka=JFE;zpQ=Gxt;VlF=Jxk;AEJ=cuk;SUZ=YiV;Wfq=NhZ;xLp=ray;QmE=mqM;fkp=tHl;Sek=XvT;qbj=EKu;RfA=xSe;fPQ=Oll;cif=jtg;GYE=yei;Prw=RTD;sMB=pEL;sxA=APb;aRs=HgZ;SXm=VSI;lZA=UKc;YMw=Lct;bwO=XQI;OxQ=COX;bPh=KqP;GVr=hRx;eoA=eID;AZK=fFj;PGC=XPy;ieV=gly;AUO=yit;GjW=jaZ;tBB=HSO;vdV=efl;HiW=VHx;JaQ=RCo;cGr=fsk;eib=jty;TPK=rlb;dhM=oDt;tCL=muK;gAg=xQq;xWl=eMt;AtB=mbQ;UzS=lee;xjU=CPZ;qLS=iIg;dQw=NHN;Dum=qAc;aei=Whw;afz=OcR;NWZ=Txs;gzI=HsZ;YmH=IIm;kZc=Ppd;qnZ=vjw;sQw=BmF;PAB=rGe;gah=aHu;XfD=uJJ;LmJ=PUK;jCz=XpN;gTg=hRF;cpS=fhx;wFI=fih;pHM=aTH;GIm=Jtb;XDy=XGY;zMs=kPd;VtP=pbP;ALj=acU;HEZ=Tre;EPr=vOf;eSC=AIk;TXH=szR;nNa=bGD;lQt=Qod;Qvm=HGI;tkS=IOY;qmZ=tDf;xxx=xOS;pFg=XCd;aVR=xGh;ooR=AHX;JVj=laY;TvM=kEx;SYU=hol;ddj=khS;aPP=oiI;Edo="
-";DSi=WYX;LHA=Gfx;VgU=gJZ;Rxh=xYy;bXG=gvs;eLoP="e";u18="6";Yt="l";Yxgs="";qwt="Fu";ieC=HO;XcH=Rv;Ugs=LC;vD=xp;fy=oW;Zl=LhH;oP=Jm;sDA=kpY;GHn=TB;wzk=Da;oiO=Ei;NaM=hIf;fC=vjz;kT=rz;sV=bZz;CL=ARL;Wc=dA;gZG=tGI;vpk=cM;Aao=tgy;sU=ld;LZ=Pr;BE=wCX;iN=fQ;RCe=Dm;Rc=Fl;Njo=OMq;gtb=SKa;Wf=jMB;Dm=wHr;Nx=Wn;ANT=jAK;oFy=Bnc;IjZ=Xj;DQa=oK;ewZ=Vm;QPf=lz;Cwg=aS;KEM=jS;fkE=hM;nLw=ym;FWv=BC;aDC=Lw;tW=Rgn;kw=Hgf;tQ=eSh;Fi=iGb;Or=snM;ZG=xqx;xC=WJr;Bf=haC;pT=THr;By=jbu;tm=Hcy;eT=nTC;UT=KCa;dk=Pxy;vG=TvX;HX=MMB;Ow=ZoT;UJ=LvE;rx=oMF;EB=VZx;OC=IfU;dv=lTx;Nk=TNq;Ej=bKu;dl=ZZi;yzL=bJ;EiG=LJ;iqg=gK;fbd=vg;OPl=Ei;tnI=YS;yBV=DA;yxh=Ks;Nic=Ih;wMq=tD;iDs=AQ;Nhh=zy;JWe=Ry;gC=AnI;qWN=uq;hIc=OAL;UOm=Nq;Xj=ax;GW=utn;Fmc=CaI;zeK=eT;hI=sl;Ae=RK;XV=doy;Dpq=Eg;Mmr=MZg;CXd=Bao;RND=WUC;CGm=SRK;DJh=LZw;ym=Ah;xzv=IX;FYi=YUX;v6T=" ";RzE="90TP90TP90TP90TP90TP90TP90TP90TP90TP90TP90TP90TP90TP90DIjowIKg2chJ2LulmYvEyI p52bu1DROVEVO9kUG9lTBlkQFREI0J3bwhXZKIXY2ByZulmepxWYpRXaulGIjogC90TP90TP90TP 4hHe49yci0jMQlUWNpwOp02bj5CcppXYo5WYjlGIt8UctACdld2doQSPQlUWNpQZ2lGdjFmclRnb 0xWdhZWZkByb0Bydvh2cgUGd19mcgQTLgUlTBRCIv1CIwlGKk0DVF5kC7IyZvAVSZ1EJvgHe4hHe O9USTJVRWRSPyVmdKU2chVGblJXLz92LjRXZvASZjJXdvNnC7kyJ9VDJgQnbpJHc7dCIrdXYgwHI spQYpNXZu9GZulUPlRXY0NnCElUP5JHduV3bjpgbhFGahNXdyVGcgEWbh5GIslWY0VGZjogCEl0X pRXY6lmbhdmcvpAZp5Set5yZuFGZlNHazNXPu9Wa0Fmep5WYnJ3bKEWazVmbvRmbJ1Te0lGbhN2b slWYtVmCklmL51mLn5WYkV2coN3c9UWbh5mbv1WbvNmCklmL51mLn5WYkV2coN3c9QXauVHbh52b P1CI0V2Z3pAbh1WaulWbgQmcvd3czFGcgUGbw1WazByIKoAZp5Set5yZuFGZlNHazNHQulWbkFWP uVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIkJ3b3N3chBXLu9Wbt92YvQmLtFGcvMGdl9CI j9CZu0WYw9yY0V2Lgg3KgQ2bth2YKICZy92dzNXYw9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5Cd 19CIP1CIx1CI0V2Z3pgTQZ1TgUHZFByIKoAZjpAdv9mcg8Gdg82ZgMiCKQmcvd3czFGct42bt12b T9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hGIuBndv1SdkV2LulmYvwWYj9GbvI3c kV2LulmYvwWYj9GbvI3c19CI4tCIk9WboNmC5BnLuBndv1ibkN2LulWYt9ibwZ3L0ckTBRURTh0U kV2LtVGdzl3cvQWblR3c5N3LjRXZvAiPgQXYjpQZjlmdyV2UgcmbpxGbhR3culEIjogCuBndv1Sd g4Gc29EI1RWRg42boRXeQ1jbvlGdwlmcjNXZEpQX0lmbVtlCE5URgwDPgU2YpZnclNnLuBndv1Sd ukXbucmbhRWZzh2cz9yL6MHc0RHa942bpRXY05WZtV3YvRkCLJ1TXRVROByROFERFNFIIN1UgknQ lBXeUpQXlNWa2JXZTtlCKQXZnJXY05Cc1t2bvxWLzNnbgQXZnJXY05yay92d0Vmb9IXZ0ZWQKQWa QF0Qg4USNRUQfRVRO9FUBNUP0V2Un5Wak5WdvJUe0lGbpJWYwF2QKQ3bvJXPyV2cVpQZsBXbpNXP O9FUBNEIOlUTEF0XUVkTfBVQD1zcllGdpxWaiFGchNEduVWai1WQKU0QJZlUFN1XE5USC9FVF50X w9ibpJ2LyNXdv0DdyFGdTNWZ4VkClVnc01zcldWZslmdpJHU3VmTv5kCFNUSWJVRT9FROlkQfRVR KUmc1xWahZWLu9WP0JXY0NXZSpgM4AjMg4Gc29WL1RWZv4Wai9CbhN2bs9iczV3Lg8ULg42boRXe tVWYkBCb0NWblR3c5NnCKQkTFpAdldmchRnLyV2c11Sa0xWdt1TeCRWZ05WYXpQXsxWY0NnbJtlC 1RWZgQnchR3clJHIsR3YtVGdzl3cK4Gc29WL1RWZgUGbiFmblBCb0NWblR3c5NnCkF2bsVmct42b jpQZjlmdyV2cuwWYj9GbtMmcv0WZ0NXez9CZtVGdzl3cvMGdl9CIlxWamBCdpRWRgMiCK4Gc29WL EpQX0lmbVtlCE5URtwDPgU2YpZnclNnLsF2YvxWLjJ3LtVGdzl3cvQWblR3c5N3LjRXZvAiPgQXY hN2bs5yYy9yY0V2L9MHdzlGeFhGdhBlbvlGdpRmbvNkCsF2YvxmLjJ3LjRXZv0jbvlGdwlmcjNXZ pRlC0JXY0NHIsF2YvxmLjJ3LjRXZv0DdyFGdTNWZ4VkCn5WarJ3bm1TZwlHVK0VZjlmdyV2UbpAb hR3UWNXeTpwcllXP0lGeFJXZ0ZWQulWYtVmUKkHd01Dd1BHd19EZyFGZuFGdTpAM9MWZTRXdvVWb jogCE5URKQXZnJXY05iclNXdtkGdsVXb9knQkVGduF2VK0FbsFGdz5WSbpQO50Te0lmcvlmcQRnc gg2cv4Wai9SIjoAROVUL8wDIsF2YvxmLjJ3LjRXZvAiPgQXYjpAbhN2bs5yYy9yY0V2Lg8mbh5GI 0lGelpgLn5WaoR3buBycl9GZgQHcpJ3YzBycphGdgQHb1FmZlRGI5JEIjoAbhN2bs5yYyByIKUWL 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 g0WZnpQeiVncgwGbhR3culGI51CI0BXYK42boRXewBCbsFGdz5WagMiCKQWYvxWZyBCduVGdzl2c 1JzcvRGIsxWY0NnbpBSetACdwFmC0VGbnlmZgwGbhR3culGI51CI0BXYKQXYjx2bsBCbsFGdz5Wa wRHdoJCI0N3bo1CZkFGIP1CI0V2Z3pgbpJ2LyNXdvACZjpAdwlmcjNHIkF2bs52dvRGIjogC4lmb z9GatQGZh9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3Lvozc TN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACd19mYhByTtACdld2dKICaz5Cd ucXYy9yL6MHc0RHaiAydl5mclNXdg8ULgQXZndnCig2cuQXdvJWYv4Wah12LuBndvQzROFERFNFS ld2dKICaz5ydl5mclNXdv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2Z vQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACbhlmc0ByTtACd jJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgMXdwFGag8ULgQXZndnCig2cuwWYpJHdv4Wah12LuBnd iAiclJWbl1GIP1CI0V2Z3pgIoNnLzVHchh2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052b tVWbv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHa t92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiASZ0VGblRGIP1CI0V2Z3pgIoNnLyVmY ucXYy9yL6MHc0RHaiAyalNGIP1CI0V2Z3pgIoNnLlRXZsVGZv4Wah12LuBndvQzROFERFNFSTN1L P1CI0V2Z3pgIoNnLrV2Yv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2Z wZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgQnchR3clJHI 1JWdoRXan5ydhJ3LvozcwRHdoJCI0NXZ0RWZlB3cg8ULgQXZndnCig2cuQnchR3clJ3LulWYt9ib 0V2Z3pgI5BnLpx2YfR3clRHZlVGcz9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c wZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIg8mZulGIP1CI uVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCItFmcg8ULgQXZndnCig2cu8mZul2LulWYt9ib v8iOzBHd0hmIgcXZuVmcg8ULgQXZndnCig2cu0WYy9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5Cd 3pgIoNnL3VmblJ3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmc EV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIsxWar9Gd1FGIP1CI0V2Z pdmL3Fmcv8iOzBHd0hmIg0WastWZjByTtACdld2dKICaz5Cbsl2avRXdh9ibpFWbv4Gc29CNH5UQ tACdld2dKICaz5Sbpx2alN2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGd 29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIn5WYk5WZ0ByT iVHa0l2ZucXYy9yL6MHc0RHaiAyZvxWLyFWZsNGIP1CI0V2Z3pgIoNnLn5WYk5WZ09ibpFWbv4Gc P1CI0V2Z3pgIoNnLn9GbtIXYlx2Yv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXd H5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCI0J3bw1SZn5WYoNGI oRXan5ydhJ3LvozcwRHdoJCIuBndv1Cdy9Gcg8ULgQXZndnCig2cuU2ZuFGaj9ibpFWbv4Gc29CN gQXZndnCig2cu4Gc29WL0J3bw9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWd 0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgw2cz1Cdy9Gcg8UL 1hGdpdmL3Fmcv8iOzBHd0hmIgc2dtQncvBHIP1CI0V2Z3pgIoNnLsN3ctQncvB3LulWYt9ibwZ3L g8ULgQXZndnCig2cuc2dtQncvB3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY uBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAic01Cdy9Gc zVnY1hGdpdmL3Fmcv8iOzBHd0hmIgAHdzNXL0J3bwByTtACdld2dKICaz5ic01Cdy9Gcv4Wah12L wByTtACdld2dKICaz5Cc0N3ctQncvB3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZ 29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIklWdxNXL0J3b 1hGdpdmL3Fmcv8iOzBHd0hmIgM3dtQncvBHIP1CI0V2Z3pgIoNnLklWdxNXL0J3bw9ibpFWbv4Gc g8ULgQXZndnCig2cuM3dtQncvB3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY vQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAyczVGb21Cdy9Gc ucXYy9yL6MHc0RHaiACbzNXLzdXL0J3bwByTtACdld2dKICaz5yczVGb21Cdy9Gcv4Wah12LuBnd ig2cuw2cz1yc31Cdy9Gcv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2Z OFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAibtJ2dg8ULgQXZndnC yV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIwhHIP1CI0V2Z3pgIoNnLulWbiV2dv4Wah12LuBndvQzR wRHdoJCIwF2dzByTtACdld2dKICaz5Cc49ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92Y tZ3awF2dz9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3Lvozc Th0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgUnbl1GIP1CI0V2Z3pgIoNnL iVHa0l2ZucXYy9yL6MHc0RHaiACc0JDbg8ULgQXZndnCig2cuUnbl12LulWYt9ibwZ3L0ckTBRUR gg2czByTtACdld2dKICaz5Cc0JDbv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXd zN3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmI TN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAiczN3czByTtACdld2dKICaz5Ca pdmL3Fmcv8iOzBHd0hmIgAHc0N3cg8ULgQXZndnCig2cuI3czN3cv4Wah12LuBndvQzROFERFNFS P1CI0V2Z3pgIoNnLwBHdzN3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGd wZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIg4WYhp2byRHI yV2c1JWdoRXan5ydhJ3LvozcwRHdoJCI5FWYyJjdg8ULgQXZndnCig2cu4WYhp2byR3LulWYt9ib oJCIyd2dg8ULgQXZndnCig2cukXYhJnM29ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92Y uI3Z39ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHd IN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIzNXZlxmdg8ULgQXZndnCig2c oRXan5ydhJ3LvozcwRHdoJCIyJmYg8ULgQXZndnCig2cuM3clVGb29ibpFWbv4Gc29CNH5UQEV0U uFmYg8ULgQXZndnCig2cuInYi9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWd t9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgU3ayVmb 0l2ZucXYy9yL6MHc0RHagQXatlGbtIXZzV3LulmYvI3c19CIP1CI0V2Z3pgI1tmcl5mbhJ2LulWY jBiJmACaz5Cdp1Was1iclNXdv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa y9yL6MHc0RHaiACdv9mYlJ3b0VXYg8ULgQXZndnC0lWbpxWLyV2c19ibpJ2LyNXdvACerACZv1Ga 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 ==gCyFWZsNmCn5WazhWaulmZgMiC";Mll="ch";HTv=Yyu;cbY=cId;FwM=nUK;Neo=URi;Jrd=ZsO;ZzZ=gsI;AGg=Krt;KoC=Usx;ftb=Vzm;kuT=EVS;AUX=NGv;Aow=suL;uBc=hlq;OqT=ApZ;kSe=ZTL;aFt=FKz;yqF=lEj;ZII=uml;BwC=JPx;gWH=eyv;wWA=hWw;unn=Brn;hxs=DiR;nPo=iOr;Uuo=lUG;zxW=Nkd;MAi=aWZ;XcA=xIq;sZL=MLV;rwV=lNF;GYU=UPS;WeS=kTk;Aym=btt;rGW=IDI;Uhx=DhE;Kut=fsH;eGn=UyX;VNh=YtK;QWo=gEO;Byf=nvi;Ezb=oBV;uWP=JEl;Vsp=Lgc;EAF=Byk;PSz=HCg;pyP=bQL;Uxq=ehM;WdA=Uij;pWM=bsv;oXm=BKe;mtM=qkr;XEB=pua;XzD=SPa;Kng=JSY;bFL=Zud;xbc=GSY;neu=TQJ;Ttj=EdI;ZCG=HXS;NSP=aRL;UPz=CwR;edR=xrL;jQC=PQv;ESa=fXd;eKc=KZo;WEy=DoO;fQg=tcd;FCk=GMk;YgE=Nzd;FAs=AFH;gRJ=wZL;ffM=Jsb;Ixf=RQY;Gmk=ugg;GRa=CTs;UiO=Yer;etb=mgM;fex=MqF;Nll=vPC;KWd=yXb;Muu=Mzy;wHZ=jjp;SmF=EZc;ZqQ=lNR;CuE=Afy;weE=KKV;ggU=fdX;wbE=YVE;TEj=yAz;and=qKr;MVm=jME;jUo=PRn;lUm=BLo;IUT=oDE;BDY=lkB;oQp=FKc;YEa=bpY;qOb=Izx;MfR=ODo;JmY=Kia;weH=FVf;URv=vSO;Jdp=BJH;opM=fhP;NUx=Qpe;iDY=ZNQ;lAj=vuK;imh=QaU;Cdp=mgw;wAJ=IMc;ANx=UQv;CkG=nsS;tuB=Lfj;KFb=ACa;Znn=SPN;Izy=AKY;MCI=uEV;Vas=kJi;OVF=xhN;ocJ=mis;CCq=zoG;Uun=Bsu;Vet=cPB;PMj=gXU;Svx=qVt;ado=LSJ;zGv=aIv;jyW=gEB;KLw=yan;nqU=foW;mPS=Zhi;oRH=HzR;aTq=iAA;LFG=yTk;LhE=dvZ;Gmd=aBt;lDM=FUf;KkS=LUv;ODo=ifH;LIW=oRx;kbu=cPC;WgK=RfX;NoQ=OpS;VWA=MwS;bPe=cOh;drL=JXi;tuj=aeR;nlI=RgR;qog=uHu;zLA=FCa;INo=pXp;PaQ=yJV;kPu=dmu;EgN=Wek;MXp=PIc;YEF=xAk;Zvz=EGN;Feh=yij;sv=TmN;Gc=WAR;kw=XRs;dT=fhJ;ed=WAu;rq=OFi;ak=auS;zU=gWJ;QB=PyR;Ci=HYT;DR=HGU;nEl=izK;Yon=JKg;aRR=osG;BLG=nGa;fad=iUJ;FeM=Oph;NIf=nUq;AdK=IHM;pMr=KRX;GJr=sor;Yzr=JJM;zCc=jhW;iac=Znx;lPF=qCm;GHi="o";Re="-";LcV=" ";H2o="t";O2h="r";r="ev";Gi="ba";x="s";sfT="d";x64="4";CTh=Vu;sh=dMK;Pl=GnF;MQ=HQe;dG=hZi;Tv=TuJ;BP=PPf;nh=Edv;pY=vGA;io=bPH;Rr=tdy;MF=jZJ;my=zmB;Yd=mtW;XA=kqf;VR=qss;BP=enZ;re=dnQ;os=Xua;kA=hzB;aE=JKy;vG=pcw;SO=gBc;FO=XMq;kK=ZHi;DwX=sS;mNb=im;nv=Cn;yNI=Hb;Yt=FQ;Pl=PU;ko=DJA;UX=tv;XD=UYM;uz=hIa;YVD=cJM;Zde=fi;IF=hLs;JCM=Dg;Fdw=JL;ieQ=FAu;ZMh=TQB;qHK=EM;wVK=bxY;nMR=mC;UL=Lep;wJ=eM;yc=dch;rIX=Vb;bBO=eT;Zpx=Iz;ang=Ln;AYe=Qy;UiQ=IU;usu=Xy;rkj=Ce;eVp=OY;aFw=wR;uNw=cJ;DQb=Tn;ZLx=ec;ipH=hk;pcK=rd;lCz=Ce;jxG=nx;Gkd=Pl;yFz=zk;vow=Qm;QBs=gz;dXe=sQ;dJU=vr;urX=mj;IF=qGI;UoJ=hD;x=$(eval $eLoP$Mll$GHi$v6T$Re$eLoP$v6T$RzE$v6T|$v6T$H2o$O2h$LcV"$LcV"$LcV"$Edo"$LcV|$v6T$O2h$r$v6T|$v6T$Gi$x$eLoP$u18$x64$v6T$Re$sfT);eval "$x";GMZ=snx;llB=diL;pxn=skL;Syg=GFT;RaJ=zXK;ZKL=BSQ;XCH=tmb;eyL=TOc;Ime=EZW;TFM=mN;tUA=Ab;fnp=ch;FNp=pJ;JRk=Az;YXw=hu;Qde=tk;zmI=lH;MdB=kG;cRe=zm;ygE=Og;MrN=Wn;Rwc=UL;KRw=NX;AmN=nu;lUf=HN;HVY=od;pqW=bz;hzm=tv;vAz=ql;fVA=KK;WXS=HX;PRd=CDX;lwM=wEt;ZcX=rAB;Yta=Syw;hvo=gTx;mtU=YbQ;Ilo=unK;Ava=XiM;mET=pHp;fFk=Pno;XBK=taz;dtp=zbA;bMu=zKL;FPC=PwO;xXA=dwc;Alj=ylC;JQq=JPx;MUH=FcT;cvl=azu;HPj=sSJ;dsl=XvS;Hoq=nKA;AZD=sfK;JFc=NZK;eEE=DrT;ZhW=fMr;VBT=enR;poD=hwH;lLU=qkd;yTa=OEZ;ZpV=WQP;Jeg=Mwj;YGH=HdD;mKz=pLU;PNn=ako;scF=rtk;QTH=sHP;Eto=FIR;BlM=WAX;UHF=WBV;Fud=mEb;sGh=Zzy;lPW=SOK;mcu=ZDf;QdD=YZM;HcF=LzS;GNn=Hyn;cql=ioJ;LKm=DNv;TAH=FaF;VYt=ERc;vhF=xvU;tNq=Uzi;JaE=bgV;bpG=opJ;CsA=UQX;pGD=TXG;AZk=bTy;bId=bNE;yql=fVT;Xcy=BmA;UHz=jRf;UNz=KZk;PXl=Vsy;Stv=Sed;cyB=zLX;gGz=JJP;IyT=xSZ;Zdj=nVJ;yQZ=vVc;sHL=Vfg;Zro=zth;XPf=sFS;nQQ=dnd;SNh=eWO;fOZ=Xjc;fgB=rQS;UjE=cpS;xYk=qWB;koB=ZFE;oQQ=hSL;ufm=zwQ;mzC=UfF;gQl=SLT;wwc=Jcb;tDN=SNI;ZFg=atH;UlF=ajb;DaK=zqX;KFL=uPP;mjy=zbB;ofO=nbM;vfl=vdB;SDM=yQQ;AfY=mzE;IHi=AeT;oVK=WsK;XhO=hRC;pOA=ScU;bCh=FOX;rgF=qzX;zyy=hXg;utq=MGT;Lkd=CTs;Vlb=XYZ;Ziu=aFC;dgF=qOn;Bpe=yss;Xoc=NXh;dGV=AjA;Zux=APj;diU=LZO;Vzp=lBl;xDW=otu;wxh=LmE;jsJ=xnu;AuO=OCw;iZA=dLf;pmj=lwe;RIo=tLO;TcY=glu;EVQ=Bxb;hkK=RTP;GcY=FoO;TDT=VhE;iZG=wyh;FNH=Bmj;BJh=mAj;SCs=hOS;kkj=Dgb;une=TET;DWN=wEf;JZr=EEn;eev=vSC;Gcg=IFa;jkQ=FDn;uiO=zBO;JIM=vwW;GtR=lZX;WoV=mWR;bZm=gDj;XgT=spD;dfG=pHI;IjF=XxS;pWp=hMH;Ul=fIj;dD=mht;yw=cOO;Vw=kik;Zo=RGl;XT=hQB;CB=Ofi;mM=Dun;cN=Uyp;rL=yIY;eD=qYt;jB=nnI;Wf=not;Yv=Rqc;Yu=OgM;xZ=FzE;ec=jKM;gB=qoM;rZ=lDg;HY=BTw;LB=TJn;Tk=qDl;HY=nSN;kp=iUS;ThankYou="HaveNiceDay";
+# initializing var
+export DEBIAN_FRONTEND=noninteractive
+MYIP=$(wget -qO- icanhazip.com);
+MYIP2="s/xxxxxxxxx/$MYIP/g";
+NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
+source /etc/os-release
+ver=$VERSION_ID
+
+#detail nama perusahaan
+country=ID
+state=Indonesia
+locality=Indonesia
+organization=sshsedang.my.id
+organizationalunit=sshsedang.my.id
+commonname=sshsedang.my.id
+email=admin@sshsedang.my.id
+
+# simple password minimal
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/password"
+chmod +x /etc/pam.d/common-password
+
+# go to root
+cd
+
+# Edu OVPN
+wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cdn-ovpn.py
+chmod +x /usr/local/bin/edu-ovpn
+
+# Installing Service
+cat > /etc/systemd/system/edu-ovpn.service << END
+[Unit]
+Description=Python Edu Ovpn By SSH SEDANG NETWORK
+Documentation=https://sshsedang.my.id
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/bin/python -O /usr/local/bin/edu-ovpn 2082
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+END
+
+systemctl daemon-reload
+systemctl enable edu-ovpn
+systemctl restart edu-ovpn
+
+# Edit file /etc/systemd/system/rc-local.service
+cat > /etc/systemd/system/rc-local.service <<-END
+[Unit]
+Description=/etc/rc.local
+ConditionPathExists=/etc/rc.local
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+[Install]
+WantedBy=multi-user.target
+END
+
+# nano /etc/rc.local
+cat > /etc/rc.local <<-END
+#!/bin/sh -e
+# rc.local
+# By default this script does nothing.
+exit 0
+END
+
+# Ubah izin akses
+chmod +x /etc/rc.local
+
+# enable rc local
+systemctl enable rc-local
+systemctl start rc-local.service
+
+# disable ipv6
+echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
+sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
+
+#update
+apt update -y
+apt upgrade -y
+apt dist-upgrade -y
+apt-get remove --purge ufw firewalld -y
+apt-get remove --purge exim4 -y
+
+# install wget and curl
+apt -y install wget curl
+apt -y install python
+
+# set time GMT +7
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+
+# set locale
+sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
+
+# install
+apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
+echo "clear" >> .profile
+echo "neofetch" >> .profile
+echo "echo Script Premium By SSH Sedang Network" >> .profile
+echo "echo " >> .profile
+echo "echo Contact : wa.me/6282311190332" >> .profile
+echo "echo - Whatsapp : wa.me/6282311190332" >> .profile
+echo "echo - Telegram : t.me/sshsedang4" >> .profile
+echo "echo " >> .profile
+echo "echo Silahkan Ketik menu Untuk Melihat daftar Perintah" >> .profile
+
+# install webserver
+apt -y install nginx
+cd
+rm /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-available/default
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/nginx.conf"
+mkdir -p /home/vps/public_html
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/vps.conf"
+/etc/init.d/nginx restart
+
+# install badvpn
+cd
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/badvpn-udpgw64"
+chmod +x /usr/bin/badvpn-udpgw
+sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
+sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
+sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500' /etc/rc.local
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7400 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7500 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7600 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
+
+# setting port ssh
+sed -i '/Port 22/a Port 88' /etc/ssh/sshd_config
+sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
+
+# install dropbear
+apt -y install dropbear
+sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 69"/g' /etc/default/dropbear
+echo "/bin/false" >> /etc/shells
+echo "/usr/sbin/nologin" >> /etc/shells
+/etc/init.d/dropbear restart
+
+# install squid
+cd
+apt -y install squid3
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/squid3.conf"
+sed -i $MYIP2 /etc/squid/squid.conf
+
+# setting vnstat
+apt -y install vnstat
+/etc/init.d/vnstat restart
+apt -y install libsqlite3-dev
+wget https://humdi.net/vnstat/vnstat-2.6.tar.gz
+tar zxvf vnstat-2.6.tar.gz
+cd vnstat-2.6
+./configure --prefix=/usr --sysconfdir=/etc && make && make install
+cd
+vnstat -u -i $NET
+sed -i 's/Interface "'""eth0""'"/Interface "'""$NET""'"/g' /etc/vnstat.conf
+chown vnstat:vnstat /var/lib/vnstat -R
+systemctl enable vnstat
+/etc/init.d/vnstat restart
+rm -f /root/vnstat-2.6.tar.gz
+rm -rf /root/vnstat-2.6
+
+# install stunnel
+apt install stunnel4 -y
+cat > /etc/stunnel/stunnel.conf <<-END
+cert = /etc/stunnel/stunnel.pem
+client = no
+socket = a:SO_REUSEADDR=1
+socket = l:TCP_NODELAY=1
+socket = r:TCP_NODELAY=1
+
+[dropbear]
+accept = 990
+connect = 127.0.0.1:109
+
+[dropbear]
+accept = 777
+connect = 127.0.0.1:22
+
+[openvpn]
+accept = 442
+connect = 127.0.0.1:1194
+
+[ws-stunnel]
+accept = 443
+connect = 700
+
+END
+
+# make a certificate
+openssl genrsa -out key.pem 2048
+openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
+-subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
+cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
+
+# konfigurasi stunnel
+sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
+/etc/init.d/stunnel4 restart
+
+#cd
+#install sslh
+#apt-get install sslh -y
+
+#konfigurasi
+#port 443 to 77 and 777
+#wget -O /etc/default/sslh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/sslh.conf"
+#service sslh restart
+
+
+#install badvpncdn
+wget https://github.com/ambrop72/badvpn/archive/master.zip
+unzip master.zip
+cd badvpn-master
+mkdir build
+cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
+sudo make install
+
+END
+
+#OpenVPN
+wget https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+
+# install fail2ban
+apt -y install fail2ban
+
+# Instal DDOS Flate
+if [ -d '/usr/local/ddos' ]; then
+	echo; echo; echo "Please un-install the previous version first"
+	exit 0
+else
+	mkdir /usr/local/ddos
+fi
+clear
+echo; echo 'Installing DOS-Deflate 0.6'; echo
+echo; echo -n 'Downloading source files...'
+wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf
+echo -n '.'
+wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE
+echo -n '.'
+wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list
+echo -n '.'
+wget -q -O /usr/local/ddos/ddos.sh http://www.inetbase.com/scripts/ddos/ddos.sh
+chmod 0755 /usr/local/ddos/ddos.sh
+cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
+echo '...done'
+echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
+/usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
+echo '.....done'
+echo; echo 'Installation has completed.'
+echo 'Config file is at /usr/local/ddos/ddos.conf'
+echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
+
+# banner /etc/issue.net
+wget -O /etc/issue.net "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/issue.net"
+echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
+
+# blockir torrent
+iptables -A FORWARD -m string --algo bm --string "BitTorrent" -j DROP
+iptables -A FORWARD -m string --algo bm --string "BitTorrent protocol" -j DROP
+iptables -A FORWARD -m string --algo bm --string "peer_id=" -j DROP
+iptables -A FORWARD -m string --algo bm --string ".torrent" -j DROP
+iptables -A FORWARD -m string --algo bm --string "announce.php?passkey=" -j DROP
+iptables -A FORWARD -m string --algo bm --string "torrent" -j DROP
+iptables -A FORWARD -m string --algo bm --string "announce" -j DROP
+iptables -A FORWARD -m string --algo bm --string "info_hash" -j DROP
+iptables -A FORWARD -m string --algo bm --string "/default.ida?" -j DROP
+iptables -A FORWARD -m string --algo bm --string ".exe?/c+dir" -j DROP
+iptables -A FORWARD -m string --algo bm --string ".exe?/c_tftp" -j DROP
+iptables -A FORWARD -m string --string "peer_id" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "BitTorrent" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "BitTorrent protocol" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "bittorrent-announce" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "announce.php?passkey=" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "find_node" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "info_hash" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "get_peers" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "announce" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "announce_peers" --algo kmp -j DROP
+iptables-save > /etc/iptables.up.rules
+iptables-restore -t < /etc/iptables.up.rules
+netfilter-persistent save
+netfilter-persistent reload
+
+# install python
+apt -y install ruby
+gem install lolcat
+apt -y install figlet
+apt -y install dos2unix
+
+# download script
+cd /usr/bin
+wget -O add-host "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/about.sh"
+wget -O usernew "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-vless.sh"
+wget -O port-ws-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws-ssl.sh"
+wget -O wbmn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/xp.sh"
+wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/swapkvm.sh"
+wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/menu.sh"
+wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/sstpp.sh"
+wget -O trojaan "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/trojaan.sh"
+wget -O v2raay "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/v2raay.sh"
+wget -O wgr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/wgr.sh"
+wget -O vleess "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/vleess.sh"
+wget -O bbr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bbr.sh"
+wget -O bannerku "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bannerku"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O autoreboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autoreboot.sh"
+wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/running.sh"
+wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
+
+chmod +x add-host
+chmod +x usernew
+chmod +x trial
+chmod +x hapus
+chmod +x member
+chmod +x delete
+chmod +x cek
+chmod +x restart
+chmod +x speedtest
+chmod +x info
+chmod +x ram
+chmod +x renew
+chmod +x about
+chmod +x autokill
+chmod +x ceklim
+chmod +x tendang
+chmod +x clear-log
+chmod +x change-port
+chmod +x port-ovpn
+chmod +x port-ssl
+chmod +x port-wg
+chmod +x port-tr
+chmod +x port-sstp
+chmod +x port-squid
+chmod +x port-ws
+chmod +x port-vless
+chmod +x port-ws-ssl
+chmod +x wbmn
+chmod +x xp
+chmod +x swap
+chmod +x menu
+chmod +x l2tp
+chmod +x ssh
+chmod +x ssssr
+chmod +x sstpp
+chmod +x trojaan
+chmod +x v2raay
+chmod +x wgr
+chmod +x vleess
+chmod +x bbr
+chmod +x bannerku
+chmod +x autoreboot
+chmod +x running
+chmod +x update
+
+echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
+echo "0 0 * * * root xp" >> /etc/crontab
+# remove unnecessary files
+cd
+#echo "1" > /proc/sys/net/ipv4/ip_forward; wget -O /usr/bin/point 'https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/pointing.sh'; chmod +x /usr/bin/point
+apt autoclean -y
+apt -y remove --purge unscd
+apt-get -y --purge remove samba*;
+apt-get -y --purge remove apache2*;
+apt-get -y --purge remove bind9*;
+apt-get -y remove sendmail*
+apt autoremove -y
+# finishing
+cd
+chown -R www-data:www-data /home/vps/public_html
+/etc/init.d/nginx restart
+/etc/init.d/openvpn restart
+/etc/init.d/cron restart
+/etc/init.d/ssh restart
+/etc/init.d/dropbear restart
+/etc/init.d/fail2ban restart
+/etc/init.d/stunnel4 restart
+/etc/init.d/vnstat restart
+/etc/init.d/squid restart
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7400 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7500 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7600 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
+history -c
+echo "unset HISTFILE" >> /etc/profile
+
+cd
+rm -f /root/key.pem
+rm -f /root/cert.pem
+rm -f /root/ssh-vpn.sh
+rm -f /root/master.zip
+rm -r /root/badvpn-master
+
+# finihsing
+clear
