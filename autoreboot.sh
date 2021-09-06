@@ -64,6 +64,7 @@ echo "" > /root/log-reboot.txt
 echo "Auto Reboot Log successfully deleted!"
 elif test $x -eq 10; then
 menu
+fi
 else
 echo "Options Not Found In Menu"
 exit
