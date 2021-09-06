@@ -26,9 +26,10 @@ echo "6.  Set Auto-Reboot Setiap 1 Bulan"
 echo "7.  Matikan Auto-Reboot"
 echo "8.  View reboot log"
 echo "9.  Remove reboot log"
-echo "10. Exit"
 echo "-------------------------------------------" | lolcat
-read -p "Select options from (1-10): " x
+echo "Type anything to exit menu"
+echo "-------------------------------------------" | lolcat
+read -p "Select options from (1-9): " x
 
 if test $x -eq 1; then
 echo "10 * * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
@@ -62,10 +63,8 @@ fi
 elif test $x -eq 9; then
 echo "" > /root/log-reboot.txt
 echo "Auto Reboot Log successfully deleted!"
-elif test $x -eq 10; then
-menu
-fi
 else
 echo "Options Not Found In Menu"
 exit
+menu
 fi
