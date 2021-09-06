@@ -1,10 +1,10 @@
 #!/bin/bash
-
+clear
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
+echo "Name : Auto Reboot"
 if [ ! -e /usr/local/bin/reboot_otomatis ]; then
 echo '#!/bin/bash' > /usr/local/bin/reboot_otomatis 
 echo 'tanggal=$(date +"%m-%d-%Y")' >> /usr/local/bin/reboot_otomatis 
