@@ -104,14 +104,6 @@ wget -O del-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-sstp
 wget -O cek-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-sstp.sh"
 wget -O renew-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-sstp.sh"
 wget -O port-ws-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws-ssl.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-vless.sh"
 
 chmod +x menu
 chmod +x l2tp
@@ -186,14 +178,6 @@ chmod +x del-sstp
 chmod +x cek-sstp
 chmod +x renew-sstp
 chmod +x port-ws-ssl
-chmod +x port-ovpn
-chmod +x port-ssl
-chmod +x port-wg
-chmod +x port-tr
-chmod +x port-sstp
-chmod +x port-squid
-chmod +x port-ws
-chmod +x port-vless
 
 clear
 echo " Successfully Update :" | lolcat
