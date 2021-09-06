@@ -63,7 +63,7 @@ fi
 elif test $x -eq 9; then
 echo "" > /root/log-reboot.txt
 echo "Auto Reboot Log successfully deleted!"
-else
+else:
 echo "Options Not Found In Menu"
 exit
 menu
