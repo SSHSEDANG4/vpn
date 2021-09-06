@@ -17,7 +17,7 @@ echo -e "# Admin Portal & White Vps                      #"
 echo -e "# Tuan YZ                                       #" 
 echo -e "# Adisubagja                                    #"
 echo -e "# Demonk                                        #" 
-echo -e "#                                               #" 
+echo -e "# Dimas INET Grub                               #" 
 echo -e "#-----------------------------------------------#" | lolcat
 echo -e "# Rebuild By : SSH SEDANG NETWORK               #" 
 echo -e "# Contact    : t.me/sshsedang4                  #" 
