@@ -1,20 +1,10 @@
 #!/bin/bash
+
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-bl='\e[36;1m'
-bd='\e[1m'
-MYIP=$(wget -qO- ifconfig.co);
+MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
-echo "Only For Premium Users"
-exit 0
-fi
-
 if [ ! -e /usr/local/bin/reboot_otomatis ]; then
 echo '#!/bin/bash' > /usr/local/bin/reboot_otomatis 
 echo 'tanggal=$(date +"%m-%d-%Y")' >> /usr/local/bin/reboot_otomatis 
@@ -24,21 +14,20 @@ echo '/sbin/shutdown -r now' >> /usr/local/bin/reboot_otomatis
 chmod +x /usr/local/bin/reboot_otomatis
 fi
 
-echo -e "═════════════════════════════════════════════\e[m" | lolcat
-echo -e "        $bl [System Auto Reboot Menu]          \e[m"
-echo -e "═════════════════════════════════════════════\e[m" | lolcat
-echo -e "$bd 1$bl] \e[m $bdSet Auto-Reboot Setiap 1 Jam"
-echo -e "$bd 2$bl] \e[m $bdSet Auto-Reboot Setiap 6 Jam"
-echo -e "$bd 3$bl] \e[m $bdSet Auto-Reboot Setiap 12 Jam"
-echo -e "$bd 4$bl] \e[m $bdSet Auto-Reboot Setiap 1 Hari"
-echo -e "$bd 5$bl] \e[m $bdSet Auto-Reboot Setiap 1 Minggu"
-echo -e "$bd 6$bl] \e[m $bdSet Auto-Reboot Setiap 1 Bulan"
-echo -e "$bd 7$bl] \e[m $bdMatikan Auto-Reboot"
-echo -e "$bd 8$bl] \e[m $bdView reboot log"
-echo -e "$bd 9$bl] \e[m $bdRemove reboot log"
-echo -e "══════════════════════════════════════════════\e[m" | lolcat
-echo -e "$bd Press CTRL+C to return\e[m"
-read -p " Select options from (1-9):" x
+echo "-------------------------------------------"
+echo "          System Auto Reboot Menu          "
+echo "-------------------------------------------"
+echo "1.  Set Auto-Reboot Setiap 1 Jam"
+echo "2.  Set Auto-Reboot Setiap 6 Jam"
+echo "3.  Set Auto-Reboot Setiap 12 Jam"
+echo "4.  Set Auto-Reboot Setiap 1 Hari"
+echo "5.  Set Auto-Reboot Setiap 1 Minggu"
+echo "6.  Set Auto-Reboot Setiap 1 Bulan"
+echo "7.  Matikan Auto-Reboot"
+echo "8.  View reboot log"
+echo "9.  Remove reboot log"
+echo "-------------------------------------------"
+read -p "Select options from (1-9): " x
 
 if test $x -eq 1; then
 echo "10 * * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
@@ -71,7 +60,7 @@ if [ ! -e /root/log-reboot.txt ]; then
 fi
 elif test $x -eq 9; then
 echo "" > /root/log-reboot.txt
-echo "Auto Reboot Log successfully deleted!" | lolcat
+echo "Auto Reboot Log successfully deleted!"
 else
 echo "Options Not Found In Menu"
 exit
