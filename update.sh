@@ -66,7 +66,7 @@ wget -O port-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws.s
 wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-vless.sh"
 wget -O wbmn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/webmin.sh"
 wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/user-limit.sh && chmod +x /usr/bin/user-limit
-wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/auto-reboot.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autoreboot.sh"
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/running.sh"
 wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
 wget -O add-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-wg.sh"
@@ -142,7 +142,7 @@ chmod +x port-ws
 chmod +x port-vless
 chmod +x wbmn
 chmod +x swap
-chmod +x auto-reboot
+chmod +x autoreboot
 chmod +x running
 chmod +x update
 chmod +x add-wg
