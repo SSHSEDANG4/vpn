@@ -66,5 +66,4 @@ echo "Auto Reboot Log successfully deleted!"
 else:
 echo "Options Not Found In Menu"
 exit
-menu
 fi
