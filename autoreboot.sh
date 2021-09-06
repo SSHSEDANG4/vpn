@@ -14,9 +14,9 @@ echo '/sbin/shutdown -r now' >> /usr/local/bin/reboot_otomatis
 chmod +x /usr/local/bin/reboot_otomatis
 fi
 
-echo "-------------------------------------------"
+echo "-------------------------------------------" | lolcat
 echo "          System Auto Reboot Menu          "
-echo "-------------------------------------------"
+echo "-------------------------------------------" | lolcat
 echo "1.  Set Auto-Reboot Setiap 1 Jam"
 echo "2.  Set Auto-Reboot Setiap 6 Jam"
 echo "3.  Set Auto-Reboot Setiap 12 Jam"
@@ -26,7 +26,7 @@ echo "6.  Set Auto-Reboot Setiap 1 Bulan"
 echo "7.  Matikan Auto-Reboot"
 echo "8.  View reboot log"
 echo "9.  Remove reboot log"
-echo "-------------------------------------------"
+echo "-------------------------------------------" | lolcat
 read -p "Select options from (1-9): " x
 
 if test $x -eq 1; then
