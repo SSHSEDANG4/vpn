@@ -27,7 +27,7 @@ echo "7.  Matikan Auto-Reboot"
 echo "8.  View reboot log"
 echo "9.  Remove reboot log"
 echo "-------------------------------------------" | lolcat
-echo "Type anything to exit menu"
+echo "Type what is not in the menu to exit"
 echo "-------------------------------------------" | lolcat
 read -p "Select options from (1-9): " x
 
