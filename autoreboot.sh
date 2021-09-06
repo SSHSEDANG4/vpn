@@ -28,7 +28,7 @@ echo "8.  View reboot log"
 echo "9.  Remove reboot log"
 echo "10. Exit"
 echo "-------------------------------------------" | lolcat
-read -p "Select options from (1-9): " x
+read -p "Select options from (1-10): " x
 
 if test $x -eq 1; then
 echo "10 * * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
