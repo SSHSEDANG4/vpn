@@ -26,6 +26,7 @@ echo "6.  Set Auto-Reboot Setiap 1 Bulan"
 echo "7.  Matikan Auto-Reboot"
 echo "8.  View reboot log"
 echo "9.  Remove reboot log"
+echo "10. Exit"
 echo "-------------------------------------------" | lolcat
 read -p "Select options from (1-9): " x
 
@@ -61,6 +62,8 @@ fi
 elif test $x -eq 9; then
 echo "" > /root/log-reboot.txt
 echo "Auto Reboot Log successfully deleted!"
+elif test $x -eq 10; then
+menu
 else
 echo "Options Not Found In Menu"
 exit
