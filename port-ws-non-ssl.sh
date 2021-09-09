@@ -36,7 +36,7 @@ cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
 sed -i "s/$ssl2/$stl/g" /usr/local/bin/ws-dropbear
 sed -i "s/   - Websocket NON SSL           : $ssl2/   - Websocket NON SSL           : $stl/g" /root/log-install.txt
-#/etc/init.d/stunnel4 restart > /dev/null
+systemctl restart ws-dropbear.service > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
 echo "Port $stl is used"
