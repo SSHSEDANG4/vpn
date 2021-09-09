@@ -13,7 +13,7 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-nonssl="$(cat ~/log-install.txt | grep -w "Websocket NON SSL" | cut -d: -f2|sed 's/ //g')"
+tls="$(cat ~/log-install.txt | grep -w "Websocket NON SSL" | cut -d: -f2|sed 's/ //g')"
 echo -e "======================================" | lolcat
 echo -e "Name : Change Port Websocket NON SSL"
 echo -e ""
@@ -33,8 +33,8 @@ exit 0
 fi
 cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
-sed -i "s/$nonssl/$stl/g" /usr/local/bin/ws-dropbear
-sed -i "s/   - Websocket NON SSL       : $nonssl/   - Websocket NON SSL       : $stl/g" /root/log-install.txt
+sed -i "s/$tls/$stl/g" /usr/local/bin/ws-dropbear
+sed -i "s/   - Websocket NON SSL       : $tls/   - Websocket NON SSL       : $stl/g" /root/log-install.txt
 /etc/init.d/python restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
