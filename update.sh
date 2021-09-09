@@ -1,4 +1,201 @@
 #!/bin/bash
+if [ "${EUID}" -ne 0 ]; then
+		echo "You need to run this script as root"
+		exit 1
+fi
+if [ "$(systemd-detect-virt)" == "openvz" ]; then
+		echo "OpenVZ is not supported"
+		exit 1
+fi
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+MYIP=$(wget -qO- icanhazip.com);
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/ipvps | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Permission Accepted...${NC}"
+else
+echo -e "${red}Permission Denied!${NC}";
+echo "Please Contact Admin"| lolcat
+echo "Telegram : t.me/sshsedang4"
+echo "Whatsapp : 082311190332"
+exit 0
+fi
 
-God="BlessYou";krF=FoL;Gnr=Vl;QIy=Is;UOt=FC;kVE=Sk;KlM=gM;Xwe=TF;oTX=dD;Yox=Qa;wQx=mb;Kqb=Zy;xWU=twB;gTp=auw;hwZ=Ejp;tHg=iQZ;ojo=shb;jhw=FjF;IDL=klV;wOA=yFT;PZL=XfL;DRJ=DiE;bmJ=FCa;XGN=dOT;QCK=dkY;SOb=WJE;RJx=uAv;czJ=dts;VGB=oCy;TyO=xGj;yHU=bpq;Nfb=Wct;doQ=Ibf;XCL=rax;ZNH=Hhf;Eoh=yCU;ghd=hut;ooz=VKY;qMf=PrY;Ecf=Lke;BbJ=jie;QOI=lOT;oi=QkU;yM=iDO;rT=twI;wa=BEk;Lf=SGl;Sx=Kri;yL=RiF;Xf=iZT;iv=fpC;fW=nki;qX=FrL;ba=OUY;czP=Hdm;ecN=WKt;QMW=BnB;Nsq=jdC;nof=OZt;bhx=qNV;vVN=xaU;smp=Wta;ceY=GDh;AIB=juO;miA=Cso;zgz=Hka;Kea=YMq;hUp=SWY;zMP=ozk;WGK=JEt;pkF=jjF;FCq=pFs;ZrQ=VcQ;ZjS=do;BTP=Su;sly=xM;aZl=vF;iJn=bo;QCl=HB;SCO=xo;fUq=Jo;Epq=zc;wxq=Ev;ziJ=Gx;Kzo=JF;PDO=pJ;qhq=yp;OYk=rj;OGy=Cc;hSK=xR;lnD=um;UXi=pl;xBF=xP;qOD=iX;RVy=nl;mqe=JK;rQt=CA;qJD=FR;sPp=XZ;moh=DC;Fsj=GWh;NTx=Jnx;dwG=ncr;Ugd=mFV;ZTt=WjI;mFG=lms;YGK=bPI;UKs=ibv;hka=JFE;zpQ=Gxt;VlF=Jxk;AEJ=cuk;SUZ=YiV;Wfq=NhZ;xLp=ray;QmE=mqM;fkp=tHl;Sek=XvT;qbj=EKu;RfA=xSe;fPQ=Oll;cif=jtg;GYE=yei;Prw=RTD;sMB=pEL;sxA=APb;aRs=HgZ;SXm=VSI;lZA=UKc;YMw=Lct;bwO=XQI;OxQ=COX;bPh=KqP;GVr=hRx;eoA=eID;AZK=fFj;PGC=XPy;ieV=gly;AUO=yit;GjW=jaZ;tBB=HSO;vdV=efl;HiW=VHx;JaQ=RCo;cGr=fsk;eib=jty;TPK=rlb;dhM=oDt;tCL=muK;gAg=xQq;xWl=eMt;AtB=mbQ;UzS=lee;xjU=CPZ;qLS=iIg;dQw=NHN;Dum=qAc;aei=Whw;afz=OcR;NWZ=Txs;gzI=HsZ;YmH=IIm;kZc=Ppd;qnZ=vjw;sQw=BmF;PAB=rGe;gah=aHu;XfD=uJJ;LmJ=PUK;jCz=XpN;gTg=hRF;cpS=fhx;wFI=fih;pHM=aTH;GIm=Jtb;XDy=XGY;zMs=kPd;VtP=pbP;ALj=acU;HEZ=Tre;EPr=vOf;eSC=AIk;TXH=szR;nNa=bGD;lQt=Qod;Qvm=HGI;tkS=IOY;qmZ=tDf;xxx=xOS;pFg=XCd;aVR=xGh;ooR=AHX;JVj=laY;TvM=kEx;SYU=hol;ddj=khS;aPP=oiI;Edo="
-";DSi=WYX;LHA=Gfx;VgU=gJZ;Rxh=xYy;bXG=gvs;eLoP="e";u18="6";Yt="l";Yxgs="";qwt="Fu";ieC=HO;XcH=Rv;Ugs=LC;vD=xp;fy=oW;Zl=LhH;oP=Jm;sDA=kpY;GHn=TB;wzk=Da;oiO=Ei;NaM=hIf;fC=vjz;kT=rz;sV=bZz;CL=ARL;Wc=dA;gZG=tGI;vpk=cM;Aao=tgy;sU=ld;LZ=Pr;BE=wCX;iN=fQ;RCe=Dm;Rc=Fl;Njo=OMq;gtb=SKa;Wf=jMB;Dm=wHr;Nx=Wn;ANT=jAK;oFy=Bnc;IjZ=Xj;DQa=oK;ewZ=Vm;QPf=lz;Cwg=aS;KEM=jS;fkE=hM;nLw=ym;FWv=BC;aDC=Lw;tW=Rgn;kw=Hgf;tQ=eSh;Fi=iGb;Or=snM;ZG=xqx;xC=WJr;Bf=haC;pT=THr;By=jbu;tm=Hcy;eT=nTC;UT=KCa;dk=Pxy;vG=TvX;HX=MMB;Ow=ZoT;UJ=LvE;rx=oMF;EB=VZx;OC=IfU;dv=lTx;Nk=TNq;Ej=bKu;dl=ZZi;yzL=bJ;EiG=LJ;iqg=gK;fbd=vg;OPl=Ei;tnI=YS;yBV=DA;yxh=Ks;Nic=Ih;wMq=tD;iDs=AQ;Nhh=zy;JWe=Ry;gC=AnI;qWN=uq;hIc=OAL;UOm=Nq;Xj=ax;GW=utn;Fmc=CaI;zeK=eT;hI=sl;Ae=RK;XV=doy;Dpq=Eg;Mmr=MZg;CXd=Bao;RND=WUC;CGm=SRK;DJh=LZw;ym=Ah;xzv=IX;FYi=YUX;v6T=" ";RzE="kVWZuBSdvllIg8GajVWCJogblhGdgsTXgADIl5WLgISfElUVFtHJiAyWgYWaKg2chJ2LulmYvEyI tQWblR3c5NHKkICIbBiZppQampQMgQXa4VWCJogI092byBychBCdwlmcjNHIzlGa0Bib1JHIvRHI zBCdv5GIzlGIaZlblB3TiAyboNWZJkgCuVGa0ByOdBiI6ZnblB3biASP9AiIpQncpZXL0NWZ0VGZ 9MkTKcSbyMzOwsVZcdSPuVWZydmCn0WMzsTMbVGXn0DZlJnCpZmCxACdphXZJkgCiQWZ0J3bwBXd 0RHagwmc1NGIoQSPOlkWJpwOp02bj5CcppXYo5WYjlGIt8UctACdld2doQSPQlUWNpwJtBzWlx1J 2BXav4Wah12LwlWLzBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc ntHJiASZtAyboNWZK4WZoRHI70FIOlkWJRCI9ACUJlVTkAyWgYWaKkCIQlUWNRCIwVmcnBCfgMHc yVGU9RWZytHJiASZtAyboNWZKU2csVmCi03QOtHJu4iLkVGdwV2YjFEIu9WazNXatJXZQ1nblVmc hNGbvxGI8Jibp1GZBBCdjFGdu92QgU2chVGbQJCIvh2YlpwOi03QOtHJhQWZp5WZEBibvl2czlWb zIDOwAiOgAHchNHdhh2ViAyboNWZKICNn5WYkV2coN3cvUWbuQHI6ASbhJ3ZlxWZUJCIvh2YlpAd hNGbvxGI8BiIlRXYkBXVgcmbpRnchR3UiAyboNWZKIXYlx2YKoQampAMgQXa4VmCiIzMzATOxETM wVHIjoAdhNGbvxGI8BiIu4iLu4iLu4iLu4iLu4iLu4iIg8GajVmC0F2Ys9GbgwHIiICIvh2YlpAd u92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCI15WZtByTtACdld2dKogbpJ2LyNXdvACZjpQZ0FGZ zBHd0hmIgAHdywGIP1CI0V2Z3pgIoNnL15WZt9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGd ig2cuAHdyw2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iO H5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIoN3cg8ULgQXZndnC jJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgI3czN3cg8ULgQXZndnCig2cug2cz9ibpFWbv4Gc29CN oJCIwBHdzNHIP1CI0V2Z3pgIoNnLyN3czN3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052b wR3cz9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHd T9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgkXYhJnM2ByTtACdld2dKICaz5Cc pdmL3Fmcv8iOzBHd0hmIgI3Z3ByTtACdld2dKICaz5SehFmcyY3LulWYt9ibwZ3L0ckTBRURTh0U 2ByTtACdld2dKICaz5icnd3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGd t9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgM3clVGb 05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgInYiByTtACdld2dKICaz5yczVWZsZ3LulWY 6MHc0RHaiASdrJXZu5WYiByTtACdld2dKICaz5iciJ2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL iU3ayVmbuFmYv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL Th0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgQ3cvhWLkRWYg8ULgQXZndnC n5ydhJ3LvozcwRHdoJCI0V3biFGIP1CI0V2Z3pgIoNnL0N3bo1CZkF2LulWYt9ibwZ3L0ckTBRUR tACdld2dKICaz5Cd19mYh9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXa 29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCI3VmbyV2c1ByT yV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIsFWayRHIP1CI0V2Z3pgIoNnL3VmbyV2c19ibpFWbv4Gc iAyc1BXYoByTtACdld2dKICaz5Cbhlmc09ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92Y wFGav4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHa v02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIyVmYtVWbg8ULgQXZndnCig2cuMXd hJ3LvozcwRHdoJCIlRXZsVGZg8ULgQXZndnCig2cuIXZi1WZt9ibpFWbv4Gc29CNH5UQEV0UIN1U ndnCig2cuUGdlxWZk9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5yd 29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIrV2Yg8ULgQXZ vNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACdyFGdzVmcg8ULgQXZndnCig2cusWZj9ibpFWbv4Gc oJCIvZmbpByTtACdld2dKICaz5CdyFGdzVmcv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnb vZmbp9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHd FNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiASbhJHIP1CI0V2Z3pgIoNnL 1JWdoRXan5ydhJ3LvozcwRHdoJCI3VmblJHIP1CI0V2Z3pgIoNnLtFmcv4Wah12LuBndvQzROFER vRXdhByTtACdld2dKICaz5ydl5WZy9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c h12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACbsl2a u92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCItlGbrV2Yg8ULgQXZndnCig2cuwGbpt2b0VXYv4Wa iAyZuFGZuVGdg8ULgQXZndnCig2cu0WastWZj9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGd uVGdv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHa 05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgc2bs1ichVGbjByTtACdld2dKICaz5yZuFGZ y9GctU2ZuFGajByTtACdld2dKICaz5yZvxWLyFWZsN2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL v4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACd lRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAibwZ3btQncvBHIP1CI0V2Z3pgIoNnLldmbhh2Y sN3ctQncvBHIP1CI0V2Z3pgIoNnLuBndv1Cdy9Gcv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnb w9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCI uVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIndXL0J3bwByTtACdld2dKICaz5CbzNXL0J3b 0hmIgIHdtQncvBHIP1CI0V2Z3pgIoNnLndXL0J3bw9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5Cd tQncvB3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd j5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIwR3cz1Cdy9Gcg8ULgQXZndnCig2cuIHd iACZpVXcz1Cdy9Gcg8ULgQXZndnCig2cuAHdzNXL0J3bw9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02b y9Gcv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHa uVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIzdXL0J3bwByTtACdld2dKICaz5CZpVXcz1Cd gM3clxmdtQncvBHIP1CI0V2Z3pgIoNnLzdXL0J3bw9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5Cd vB3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmI uQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAibtJ2dg8ULgQXZndnCig2cuM3clxmdtQnc tIXZzV3LulmYvI3c19CIP1CI0V2Z3pgIoNnLulWbiV2dv4Wah12LuBndvQzROFERFNFSTN1Lt92Y h12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHagQXatlGb g8ULgQXZndnC0lWbpxWLyV2c19ibpJ2LyNXdvACerACZv1GajBiJmACaz5Cdp1Was1iclNXdv4Wa vQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACdv9mYlJ3b0VXY oRXan5ydhJ3LvozcwRHdoJCIn5Wau5WdyByTtACdld2dKICaz5Cdv9mYlJ3b0VXYv4Wah12LuBnd P1CI0V2Z3pgIoNnLn5Wau5Wdy9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWd uBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiASZ0FGZwVHI vNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAyZ31CZkFGIP1CI0V2Z3pgIoNnLlRXYkBXdv4Wah12L iAyZ31CblRGIP1CI0V2Z3pgIoNnLndXLkRWYv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnb sVGZv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHa t92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAyZ31yalNGIP1CI0V2Z3pgIoNnLndXL vozcwRHdoJCIndXL3VmblJHIP1CI0V2Z3pgIoNnLndXLrV2Yv4Wah12LuBndvQzROFERFNFSTN1L z5yZ31ydl5WZy9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3L TN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACc0JDbtQGZhByTtACdld2dKICa v8iOzBHd0hmIgAHdywWLsVGZg8ULgQXZndnCig2cuAHdywWLkRWYv4Wah12LuBndvQzROFERFNFS oNnLwRnMs1CblR2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmc IN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIwRHcw1CZkFGIP1CI0V2Z3pgI y9yL6MHc0RHaiACc0BHctwWZkByTtACdld2dKICaz5Cc0BHctQGZh9ibpFWbv4Gc29CNH5UQEV0U ig2cuAHdwBXLsVGZv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXY Th0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgAHdwBXLrV2Yg8ULgQXZndnC v8iOzBHd0hmIgAHdwBXL3VmblJHIP1CI0V2Z3pgIoNnLwRHcw1yalN2LulWYt9ibwZ3L0ckTBRUR uAHdwBXL3VmblJ3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmc t92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACc0JDbtcXZuVmcg8ULgQXZndnCig2c zBHd0hmIgM3ctQGZhByTtACdld2dKICaz5Cc0JDbtcXZuVmcv4Wah12LuBndvQzROFERFNFSTN1L z5ycz1CZkF2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iO Th0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgM3ctwWZkByTtACdld2dKICa pdmL3Fmcv8iOzBHd0hmIgM3ctsWZjByTtACdld2dKICaz5ycz1CblR2LulWYt9ibwZ3L0ckTBRUR tACdld2dKICaz5ycz1yalN2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGd vQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAycz1ydl5WZyByT iVHa0l2ZucXYy9yL6MHc0RHaiAiczNXLkRWYg8ULgQXZndnCig2cuM3ctcXZuVmcv4Wah12LuBnd kByTtACdld2dKICaz5iczNXLkRWYv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXd v4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIyN3ctwWZ lNXdiVHa0l2ZucXYy9yL6MHc0RHaiAiczNXL3VmblJHIP1CI0V2Z3pgIoNnLyN3ctwWZk9ibpFWb kFGIP1CI0V2Z3pgIoNnLyN3ctcXZuVmcv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmc h12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAyc31CZ vNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAyczVGb21CZkFGIP1CI0V2Z3pgIoNnLzdXLkRWYv4Wa 01CZkFGIP1CI0V2Z3pgIoNnLzNXZsZXLkRWYv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnb v4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAic uQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAyc31CblRGIP1CI0V2Z3pgIoNnLyRXLkRWY 0RHaiAyczVGb21CblRGIP1CI0V2Z3pgIoNnLzdXLsVGZv4Wah12LuBndvQzROFERFNFSTN1Lt92Y sZXLsVGZv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc t92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAic01CblRGIP1CI0V2Z3pgIoNnLzNXZ y9yL6MHc0RHaiAyc31yalNGIP1CI0V2Z3pgIoNnLyRXLsVGZv4Wah12LuBndvQzROFERFNFSTN1L 3pgIoNnLzdXLrV2Yv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXY FNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAyczVGb21yalNGIP1CI0V2Z ucXYy9yL6MHc0RHaiAic01yalNGIP1CI0V2Z3pgIoNnLzNXZsZXLrV2Yv4Wah12LuBndvQzROFER 0V2Z3pgIoNnLyRXLrV2Yv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2Z H5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5ydhJ3LvozcwRHdoJCIzdXL3VmblJHIP1CI ucXYy9yL6MHc0RHaiAyczVGb21ydl5WZyByTtACdld2dKICaz5yc31ydl5WZy9ibpFWbv4Gc29CN ig2cuM3clxmdtcXZuVmcv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2Z Th0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgIHdtcXZuVmcg8ULgQXZndnC hJ3LvozcwRHdoJCIwR3cz1CZkFGIP1CI0V2Z3pgIoNnLyRXL3VmblJ3LulWYt9ibwZ3L0ckTBRUR KICaz5Cc0N3ctQGZh9ibpFWbv4Gc29CNH5UQEV0UIN1Uv02bj5CduVGdu92YyV2c1JWdoRXan5yd FNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACc0N3ctwWZkByTtACdld2d 3Fmcv8iOzBHd0hmIgAHdzNXLrV2Yg8ULgQXZndnCig2cuAHdzNXLsVGZv4Wah12LuBndvQzROFER 3pgIoNnLwR3cz1yalN2LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL Th0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iOzBHd0hmIgAHdzNXL3VmblJHIP1CI0V2Z zBHd0hmIgw2cz1yc31Cdy9Gcg8ULgQXZndnCig2cuAHdzNXL3VmblJ3LulWYt9ibwZ3L0ckTBRUR tM3dtQncvB3LulWYt9ibwZ3L0ckTBRURTh0UT9SbvNmL05WZ052bjJXZzVnY1hGdpdmL3Fmcv8iO TN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACZmNGIP1CI0V2Z3pgIoNnLsN3c iVHa0l2ZucXYy9yL6MHc0RHaiAiZmNGIP1CI0V2Z3pgIoNnLkZ2Yv4Wah12LuBndvQzROFERFNFS iACamNGIP1CI0V2Z3pgIoNnLmZ2Yv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXd oZ2Yv4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHa t92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiAibpFWbvRmY1NHIP1CI0V2Z3pgIoNnL zNXLu9mbtM3dtQncvBHIP1CI0V2Z3pgIoNnLulWYt9GZiV3cv4Wah12LuBndvQzROFERFNFSTN1L v4Wah12LuBndvQzROFERFNFSTN1Lt92YuQnblRnbvNmclNXdiVHa0l2ZucXYy9yL6MHc0RHaiACb 4tCIk9WboNmCwRnMsBCerACZv1GajpQduVWbgg3KgQ2bth2YKogIoNnLsN3ct42bu1yc31Cdy9Gc gQ2bth2YKkXYhJnM2BCerACZv1GajpAcwR3czBCerACZv1GajpgczN3czBCerACZv1GajpAazNHI th2YKU3ayVmbuFmYgg3KgQ2bth2YKInYiBCerACZv1GajpwczVWZsZHI4tCIk9WboNmCyd2dgg3K oBCerACZv1GajpAbhlmc0BCerACZv1Gajpwdl5mclNXdgg3KgQ2bth2YKQ3cvhWLkRWYgg3KgQ2b rACZv1GajpwalNGI4tCIk9WboNmClRXZsVGZgg3KgQ2bth2YKIXZi1WZtBCerACZv1Gajpwc1BXY KwGbpt2b0VXYgg3KgQ2bth2YKQXdvJWYgg3KgQ2bth2YK8mZulGI4tCIk9WboNmC0JXY0NXZyBCe lJHI4tCIk9WboNmCtFmcgg3KgQ2bth2YK0WastWZjBCerACZv1GajpwZuFGZuVGdgg3KgQ2bth2Y 0J3bwBCerACZv1GajpAdy9GctU2ZuFGajBCerACZv1GajpwZvxWLyFWZsNGI4tCIk9WboNmC3Vmb zNXL0J3bwBCerACZv1GajpwZ31Cdy9Gcgg3KgQ2bth2YKw2cz1Cdy9Gcgg3KgQ2bth2YK4Gc29WL KM3dtQncvBHI4tCIk9WboNmCklWdxNXL0J3bwBCerACZv1Gajpgc01Cdy9Gcgg3KgQ2bth2YKAHd gg3KgQ2bth2YKAXY3NHI4tCIk9WboNmCu1mY3BCerACZv1GajpwczVGb21Cdy9Gcgg3KgQ2bth2Y tQGZhBCerACZv1GajpQZ0FGZwVHI4tCIk9WboNmCn5Wau5WdyBCerACZv1GajpAdv9mYlJ3b0VXY v1GajpwZ31ydl5WZyBCerACZv1GajpwZ31yalNGI4tCIk9WboNmCndXLsVGZgg3KgQ2bth2YKc2d lRGI4tCIk9WboNmCwRnMs1CZkFGIn8yLkIHXvM3JgUWLgkWLgQWZzBiJmACc0JDbtQGZhBCerACZ w1yalNGI4tCIk9WboNmCwRHcw1CblRGI4tCIk9WboNmCwRHcw1CZkFGI4tCIk9WboNmCwRnMs1Cb k9WboNmCzNXLrV2Ygg3KgQ2bth2YKM3ctwWZkBCerACZv1Gajpwcz1CZkFGI4tCIk9WboNmCwRHc yBCerACZv1GajpgczNXLsVGZgg3KgQ2bth2YKI3cz1CZkFGI4tCIk9WboNmCzNXL3VmblJHI4tCI tQGZhBCerACZv1GajpwczVGb21CZkFGI4tCIk9WboNmCzdXLkRWYgg3KgQ2bth2YKI3cz1ydl5WZ th2YKIHdtwWZkBCerACZv1GajpwczVGb21CblRGI4tCIk9WboNmCzdXLsVGZgg3KgQ2bth2YKIHd gg3KgQ2bth2YKIHdtsWZjBCerACZv1GajpwczVGb21yalNGI4tCIk9WboNmCzdXLrV2Ygg3KgQ2b gg3KgQ2bth2YKIHdtcXZuVmcgg3KgQ2bth2YKM3clxmdtcXZuVmcgg3KgQ2bth2YKM3dtcXZuVmc uVmcgg3KgQ2bth2YKAHdzNXLrV2Ygg3KgQ2bth2YKAHdzNXLsVGZgg3KgQ2bth2YKAHdzNXLkRWY oNmCmZ2Ygg3KgQ2bth2YKQmZjBCerACZv1GajpAbzNXLzdXL0J3bwBCerACZv1GajpAc0N3ctcXZ jpgCsN3ct42bu1yc31Cdy9Gcgg3KgQ2bth2YK4Wah12bkJWdzBCerACZv1GajpAamNGI4tCIk9Wb ggXaGBSLgICIvh2YlpAdhNGbvxGI8BiI6ASZ0FGZwVFI5xGb1Z2czV2YjV3UgICIvh2YlpgchVGb gwHIiICIvh2YlpgIjV2UgUDIulGIn5Wa092biVmUgICIvh2YlpgIiAyboNWZKIycnVnQgI3bulWb 1BiZtASbypQNgAXZlx2cKQXYjx2bsBCfgIiLu4iLu4iLu4iLu4iLu4iLuAiIg8GajVmC0F2Ys9Gb ==gC092biVmcKg2cuUGdhRGc";Mll="ch";HTv=Yyu;cbY=cId;FwM=nUK;Neo=URi;Jrd=ZsO;ZzZ=gsI;AGg=Krt;KoC=Usx;ftb=Vzm;kuT=EVS;AUX=NGv;Aow=suL;uBc=hlq;OqT=ApZ;kSe=ZTL;aFt=FKz;yqF=lEj;ZII=uml;BwC=JPx;gWH=eyv;wWA=hWw;unn=Brn;hxs=DiR;nPo=iOr;Uuo=lUG;zxW=Nkd;MAi=aWZ;XcA=xIq;sZL=MLV;rwV=lNF;GYU=UPS;WeS=kTk;Aym=btt;rGW=IDI;Uhx=DhE;Kut=fsH;eGn=UyX;VNh=YtK;QWo=gEO;Byf=nvi;Ezb=oBV;uWP=JEl;Vsp=Lgc;EAF=Byk;PSz=HCg;pyP=bQL;Uxq=ehM;WdA=Uij;pWM=bsv;oXm=BKe;mtM=qkr;XEB=pua;XzD=SPa;Kng=JSY;bFL=Zud;xbc=GSY;neu=TQJ;Ttj=EdI;ZCG=HXS;NSP=aRL;UPz=CwR;edR=xrL;jQC=PQv;ESa=fXd;eKc=KZo;WEy=DoO;fQg=tcd;FCk=GMk;YgE=Nzd;FAs=AFH;gRJ=wZL;ffM=Jsb;Ixf=RQY;Gmk=ugg;GRa=CTs;UiO=Yer;etb=mgM;fex=MqF;Nll=vPC;KWd=yXb;Muu=Mzy;wHZ=jjp;SmF=EZc;ZqQ=lNR;CuE=Afy;weE=KKV;ggU=fdX;wbE=YVE;TEj=yAz;and=qKr;MVm=jME;jUo=PRn;lUm=BLo;IUT=oDE;BDY=lkB;oQp=FKc;YEa=bpY;qOb=Izx;MfR=ODo;JmY=Kia;weH=FVf;URv=vSO;Jdp=BJH;opM=fhP;NUx=Qpe;iDY=ZNQ;lAj=vuK;imh=QaU;Cdp=mgw;wAJ=IMc;ANx=UQv;CkG=nsS;tuB=Lfj;KFb=ACa;Znn=SPN;Izy=AKY;MCI=uEV;Vas=kJi;OVF=xhN;ocJ=mis;CCq=zoG;Uun=Bsu;Vet=cPB;PMj=gXU;Svx=qVt;ado=LSJ;zGv=aIv;jyW=gEB;KLw=yan;nqU=foW;mPS=Zhi;oRH=HzR;aTq=iAA;LFG=yTk;LhE=dvZ;Gmd=aBt;lDM=FUf;KkS=LUv;ODo=ifH;LIW=oRx;kbu=cPC;WgK=RfX;NoQ=OpS;VWA=MwS;bPe=cOh;drL=JXi;tuj=aeR;nlI=RgR;qog=uHu;zLA=FCa;INo=pXp;PaQ=yJV;kPu=dmu;EgN=Wek;MXp=PIc;YEF=xAk;Zvz=EGN;Feh=yij;sv=TmN;Gc=WAR;kw=XRs;dT=fhJ;ed=WAu;rq=OFi;ak=auS;zU=gWJ;QB=PyR;Ci=HYT;DR=HGU;nEl=izK;Yon=JKg;aRR=osG;BLG=nGa;fad=iUJ;FeM=Oph;NIf=nUq;AdK=IHM;pMr=KRX;GJr=sor;Yzr=JJM;zCc=jhW;iac=Znx;lPF=qCm;GHi="o";Re="-";LcV=" ";H2o="t";O2h="r";r="ev";Gi="ba";x="s";sfT="d";x64="4";CTh=Vu;sh=dMK;Pl=GnF;MQ=HQe;dG=hZi;Tv=TuJ;BP=PPf;nh=Edv;pY=vGA;io=bPH;Rr=tdy;MF=jZJ;my=zmB;Yd=mtW;XA=kqf;VR=qss;BP=enZ;re=dnQ;os=Xua;kA=hzB;aE=JKy;vG=pcw;SO=gBc;FO=XMq;kK=ZHi;DwX=sS;mNb=im;nv=Cn;yNI=Hb;Yt=FQ;Pl=PU;ko=DJA;UX=tv;XD=UYM;uz=hIa;YVD=cJM;Zde=fi;IF=hLs;JCM=Dg;Fdw=JL;ieQ=FAu;ZMh=TQB;qHK=EM;wVK=bxY;nMR=mC;UL=Lep;wJ=eM;yc=dch;rIX=Vb;bBO=eT;Zpx=Iz;ang=Ln;AYe=Qy;UiQ=IU;usu=Xy;rkj=Ce;eVp=OY;aFw=wR;uNw=cJ;DQb=Tn;ZLx=ec;ipH=hk;pcK=rd;lCz=Ce;jxG=nx;Gkd=Pl;yFz=zk;vow=Qm;QBs=gz;dXe=sQ;dJU=vr;urX=mj;IF=qGI;UoJ=hD;x=$(eval $eLoP$Mll$GHi$v6T$Re$eLoP$v6T$RzE$v6T|$v6T$H2o$O2h$LcV"$LcV"$LcV"$Edo"$LcV|$v6T$O2h$r$v6T|$v6T$Gi$x$eLoP$u18$x64$v6T$Re$sfT);eval "$x";GMZ=snx;llB=diL;pxn=skL;Syg=GFT;RaJ=zXK;ZKL=BSQ;XCH=tmb;eyL=TOc;Ime=EZW;TFM=mN;tUA=Ab;fnp=ch;FNp=pJ;JRk=Az;YXw=hu;Qde=tk;zmI=lH;MdB=kG;cRe=zm;ygE=Og;MrN=Wn;Rwc=UL;KRw=NX;AmN=nu;lUf=HN;HVY=od;pqW=bz;hzm=tv;vAz=ql;fVA=KK;WXS=HX;PRd=CDX;lwM=wEt;ZcX=rAB;Yta=Syw;hvo=gTx;mtU=YbQ;Ilo=unK;Ava=XiM;mET=pHp;fFk=Pno;XBK=taz;dtp=zbA;bMu=zKL;FPC=PwO;xXA=dwc;Alj=ylC;JQq=JPx;MUH=FcT;cvl=azu;HPj=sSJ;dsl=XvS;Hoq=nKA;AZD=sfK;JFc=NZK;eEE=DrT;ZhW=fMr;VBT=enR;poD=hwH;lLU=qkd;yTa=OEZ;ZpV=WQP;Jeg=Mwj;YGH=HdD;mKz=pLU;PNn=ako;scF=rtk;QTH=sHP;Eto=FIR;BlM=WAX;UHF=WBV;Fud=mEb;sGh=Zzy;lPW=SOK;mcu=ZDf;QdD=YZM;HcF=LzS;GNn=Hyn;cql=ioJ;LKm=DNv;TAH=FaF;VYt=ERc;vhF=xvU;tNq=Uzi;JaE=bgV;bpG=opJ;CsA=UQX;pGD=TXG;AZk=bTy;bId=bNE;yql=fVT;Xcy=BmA;UHz=jRf;UNz=KZk;PXl=Vsy;Stv=Sed;cyB=zLX;gGz=JJP;IyT=xSZ;Zdj=nVJ;yQZ=vVc;sHL=Vfg;Zro=zth;XPf=sFS;nQQ=dnd;SNh=eWO;fOZ=Xjc;fgB=rQS;UjE=cpS;xYk=qWB;koB=ZFE;oQQ=hSL;ufm=zwQ;mzC=UfF;gQl=SLT;wwc=Jcb;tDN=SNI;ZFg=atH;UlF=ajb;DaK=zqX;KFL=uPP;mjy=zbB;ofO=nbM;vfl=vdB;SDM=yQQ;AfY=mzE;IHi=AeT;oVK=WsK;XhO=hRC;pOA=ScU;bCh=FOX;rgF=qzX;zyy=hXg;utq=MGT;Lkd=CTs;Vlb=XYZ;Ziu=aFC;dgF=qOn;Bpe=yss;Xoc=NXh;dGV=AjA;Zux=APj;diU=LZO;Vzp=lBl;xDW=otu;wxh=LmE;jsJ=xnu;AuO=OCw;iZA=dLf;pmj=lwe;RIo=tLO;TcY=glu;EVQ=Bxb;hkK=RTP;GcY=FoO;TDT=VhE;iZG=wyh;FNH=Bmj;BJh=mAj;SCs=hOS;kkj=Dgb;une=TET;DWN=wEf;JZr=EEn;eev=vSC;Gcg=IFa;jkQ=FDn;uiO=zBO;JIM=vwW;GtR=lZX;WoV=mWR;bZm=gDj;XgT=spD;dfG=pHI;IjF=XxS;pWp=hMH;Ul=fIj;dD=mht;yw=cOO;Vw=kik;Zo=RGl;XT=hQB;CB=Ofi;mM=Dun;cN=Uyp;rL=yIY;eD=qYt;jB=nnI;Wf=not;Yv=Rqc;Yu=OgM;xZ=FzE;ec=jKM;gB=qoM;rZ=lDg;HY=BTw;LB=TJn;Tk=qDl;HY=nSN;kp=iUS;ThankYou="HaveNiceDay";
+clear
+echo "Starting Update" | lolcat
+echo "" | lolcat
+echo "................." | lolcat
+# update
+cd /usr/bin
+
+wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/menu.sh"
+wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/sstpp.sh"
+wget -O v2raay "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/v2raay.sh"
+wget -O wgr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/wgr.sh"
+wget -O vleess "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/vleess.sh"
+wget -O bbr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bbr.sh"
+wget -O bannerku "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bannerku"
+wget -O add-host "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/about.sh"
+wget -O usernew "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/restart.sh"
+wget -O info "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/webmin.sh"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O autoreboot "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autoreboot.sh"
+wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/running.sh"
+wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/update.sh"
+wget -O add-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-wg.sh"
+wget -O add-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-l2tp.sh"
+wget -O del-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-l2tp.sh"
+wget -O add-pptp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-pptp.sh"
+wget -O del-pptp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-pptp.sh"
+wget -O cek-pptp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-pptp.sh"
+wget -O renew-pptp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-pptp.sh"
+wget -O renew-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-l2tp.sh"
+wget -O add-ss "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-ss.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-ss.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-ss.sh"
+wget -O add-ssr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-ssr.sh"
+wget -O del-ssr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-ssr.sh"
+wget -O renew-ssr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-ssr.sh"
+wget -O add-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-tr.sh"
+wget -O add-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/add-sstp.sh"
+wget -O del-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/del-sstp.sh"
+wget -O cek-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cek-sstp.sh"
+wget -O renew-sstp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/renew-sstp.sh"
+wget -O port-ws-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws-ssl.sh"
+wget -O cfd "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cfh.sh"
+wget -O subdomain "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/subdomain.sh"
+wget -O port-ws-non-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws-non-ssl.sh"
+
+chmod +x menu
+chmod +x l2tp
+chmod +x ssh
+chmod +x ssssr
+chmod +x sstpp
+chmod +x v2raay
+chmod +x wgr
+chmod +x vleess
+chmod +x bbr
+chmod +x bannerku
+chmod +x add-host
+chmod +x usernew
+chmod +x trial
+chmod +x hapus
+chmod +x member
+chmod +x delete
+chmod +x cek
+chmod +x restart
+chmod +x info
+chmod +x about
+chmod +x autokill
+chmod +x tendang
+chmod +x ceklim
+chmod +x ram
+chmod +x renew
+chmod +x clear-log
+chmod +x change-port
+chmod +x port-ovpn
+chmod +x port-ssl
+chmod +x port-wg
+chmod +x port-sstp
+chmod +x port-tr
+chmod +x port-squid
+chmod +x port-ws
+chmod +x port-vless
+chmod +x wbmn
+chmod +x swap
+chmod +x autoreboot
+chmod +x running
+chmod +x update
+chmod +x add-wg
+chmod +x del-wg
+chmod +x cek-wg
+chmod +x renew-wg
+chmod +x add-l2tp && sed -i -e 's/\r$//' add-l2tp
+chmod +x del-l2tp
+chmod +x add-pptp
+chmod +x del-pptp
+chmod +x cek-pptp
+chmod +x add-ss
+chmod +x del-ss
+chmod +x cek-ss
+chmod +x renew-ss
+chmod +x add-ssr
+chmod +x del-ssr
+chmod +x renew-ssr
+chmod +x add-ws
+chmod +x add-vless
+chmod +x add-tr
+chmod +x del-ws
+chmod +x del-vless
+chmod +x del-tr
+chmod +x cek-ws
+chmod +x cek-vless
+chmod +x cek-tr
+chmod +x renew-ws
+chmod +x renew-vless
+chmod +x renew-tr
+chmod +x add-sstp
+chmod +x del-sstp
+chmod +x cek-sstp
+chmod +x renew-sstp
+chmod +x port-ws-ssl
+chmod +x cfd
+chmod +x cff
+chmod +x cfh
+chmod +x subdomain
+chmod +x port-ws-non-ssl
+
+clear
+echo " Successfully Update :" | lolcat
+echo " - Fix minor Bugs"
+echo ""
+echo " Rebooting in 5 Sec"
+echo "" | lolcat
+echo " ................." | lolcat
+sleep 5
+rm -f update.sh
+reboot
