@@ -2,7 +2,7 @@
 # Mod by SSH SEDANG NETWORK
 opensshport="$(netstat -ntlp | grep -i ssh | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 dropbearport="$(netstat -nlpt | grep -i dropbear | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-stunnel4port="$(netstat -nlpt | grep -i stunnel | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+#stunnel4port="$(netstat -nlpt | grep -i stunnel | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 openvpnport="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
 wsssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 4 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $4}')"
@@ -19,15 +19,16 @@ portv2raynontls="$(cat ~/log-install.txt | grep -w "V2RAY Vmess None TLS" | cut 
 portvlessnontls="$(cat ~/log-install.txt | grep -w "V2RAY Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 portvlesstls="$(cat ~/log-install.txt | grep -w "V2RAY Vless TLS" | cut -d: -f2|sed 's/ //g')"
 porttrojan="$(cat ~/log-install.txt | grep -i Trojan | cut -d: -f2|sed 's/ //g')"
+ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $1}')"
+ssl2="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $2}')"
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
 echo -e "\e[0m                                                   "
 echo -e "\e[0m                                                   "
-echo -e "\e[0m                                                   "
 echo -e "         Port OpenSSH     :  "$opensshport
 echo -e "         Port Dropbear    :  "$dropbearport
-echo -e "         Port SSL         :  "$stunnel4port
+echo -e "         Port SSL         :  "$ssl $ssl2
 echo -e "         Port OpenVPN     :  "$openvpnport
 echo -e "         Port Squid       :  "$squidport
 echo -e "         Port WS SSL      :  "$wsssl
