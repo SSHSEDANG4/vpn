@@ -191,8 +191,6 @@ chmod +x subdomain
 chmod +x port-ws-non-ssl
 chmod +x list-port
 
-update
-
 clear
 echo " Successfully Update :" | lolcat
 echo " - Fix minor Bugs"
