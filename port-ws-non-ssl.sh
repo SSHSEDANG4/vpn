@@ -17,7 +17,7 @@ tls="$(cat ~/log-install.txt | grep -w "Websocket NON SSL" | cut -d: -f2|sed 's/
 echo -e "======================================" | lolcat
 echo -e "Name : Change Port Websocket NON SSL"
 echo -e ""
-echo -e "     [1]  Change Port $nonssl"
+echo -e "     [1]  Change Port $tls"
 echo -e "     [x]  Exit"
 echo -e ""
 echo -e "======================================" | lolcat
