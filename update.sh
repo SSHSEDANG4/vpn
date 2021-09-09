@@ -29,6 +29,7 @@ echo "................." | lolcat
 # update
 cd /usr/bin
 
+wget -O list-port "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/list-port.sh"
 wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/menu.sh"
 wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/l2tp.sh"
 wget -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/ssh.sh"
@@ -109,7 +110,6 @@ wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cfh.sh"
 wget -O subdomain "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/subdomain.sh"
 wget -O port-ws-non-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws-non-ssl.sh"
-wget -O list-port "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/list-port.sh"
 
 chmod +x menu
 chmod +x l2tp
