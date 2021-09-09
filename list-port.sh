@@ -22,9 +22,8 @@ porttrojan="$(cat ~/log-install.txt | grep -i Trojan | cut -d: -f2|sed 's/ //g')
 ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $1}')"
 ssl2="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $2}')"
 clear
-echo -e "\e[0m                                                   "
+echo -e "\e[0m                 Port Service                      "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
 echo -e "\e[0m                                                   "
 echo -e "         Port OpenSSH     :  "$opensshport
 echo -e "         Port Dropbear    :  "$dropbearport
