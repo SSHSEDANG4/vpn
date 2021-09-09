@@ -109,6 +109,7 @@ wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cfh.sh"
 wget -O subdomain "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/subdomain.sh"
 wget -O port-ws-non-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws-non-ssl.sh"
+wget -O list-port "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/list-port.sh"
 
 chmod +x menu
 chmod +x l2tp
@@ -188,6 +189,7 @@ chmod +x cff
 chmod +x cfh
 chmod +x subdomain
 chmod +x port-ws-non-ssl
+chmod +x list-port
 
 clear
 echo " Successfully Update :" | lolcat
