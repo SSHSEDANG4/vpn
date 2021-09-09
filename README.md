@@ -1,5 +1,4 @@
 # SSH SEDANG NETWORK
-Domain : Associated By Zero VPN
 
 # Script
 
