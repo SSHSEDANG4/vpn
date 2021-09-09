@@ -33,7 +33,7 @@ exit 0
 fi
 cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
-sed -i "s/$non-ssl/$stl/g" /usr/local/bin/ws-dropbear
+sed -i "s/$non-ssl/$stl/g" nano /usr/local/bin/ws-dropbear
 sed -i "s/   - Websocket NON SSL       : $non-ssl/   - Websocket NON SSL       : $stl/g" /root/log-install.txt
 /etc/init.d/python restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
