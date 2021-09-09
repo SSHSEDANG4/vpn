@@ -13,11 +13,13 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
+tls1="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
+none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 tls="$(cat ~/log-install.txt | grep -w "Websocket NON SSL" | cut -d: -f2|sed 's/ //g')"
 echo -e "======================================" | lolcat
 echo -e "Name : Change Port Websocket NON SSL"
 echo -e ""
-echo -e "     [1]  Change Port $tls"
+echo -e "     [1]  Change Port $tls $none $tls1"
 echo -e "     [x]  Exit"
 echo -e ""
 echo -e "======================================" | lolcat
