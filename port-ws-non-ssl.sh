@@ -16,7 +16,7 @@ clear
 ssl2="$(cat ~/log-install.txt | grep -w "Websocket NON SSL" | cut -d: -f2|sed 's/ //g')"
 #ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 4 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $4}')"
 echo -e "======================================" | lolcat
-echo -e "Name : Change Port Websocket SSL"
+echo -e "Name : Change Port Websocket NON SSL"
 echo -e ""
 echo -e "     [1]  Change Port $ssl2"
 echo -e "     [x]  Exit"
