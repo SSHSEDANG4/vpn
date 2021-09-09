@@ -27,16 +27,16 @@ read -p "     Select From Options [1 or x] :  " prot
 echo -e ""
 case $prot in
 1)
-read -p "New Port Websocket SSL: " stl
+read -p "New Port Websocket NON SSL: " stl
 if [ -z $stl ]; then
 echo "Please Input Port"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
-sed -i "s/$ssl/$stl/g" /etc/stunnel/stunnel.conf
-sed -i "s/   - Websocket SSL           : $ssl/   - Websocket SSL           : $stl/g" /root/log-install.txt
-/etc/init.d/stunnel4 restart > /dev/null
+sed -i "s/$ssl2/$stl/g" /usr/local/bin/ws-dropbear
+sed -i "s/   - Websocket SSL           : $ssl2/   - Websocket SSL           : $stl/g" /root/log-install.txt
+#/etc/init.d/stunnel4 restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
 echo "Port $stl is used"
