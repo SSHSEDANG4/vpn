@@ -13,13 +13,11 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-tls1="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
-none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
-tls="$(cat ~/log-install.txt | grep -w "Websocket NON SSL" | cut -d: -f2|sed 's/ //g')"
+ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 4 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $4}')"
 echo -e "======================================" | lolcat
-echo -e "Name : Change Port Websocket NON SSL"
+echo -e "Name : Change Port Websocket SSL"
 echo -e ""
-echo -e "     [1]  Change Port $tls $none $tls1"
+echo -e "     [1]  Change Port $ssl"
 echo -e "     [x]  Exit"
 echo -e ""
 echo -e "======================================" | lolcat
@@ -28,16 +26,16 @@ read -p "     Select From Options [1 or x] :  " prot
 echo -e ""
 case $prot in
 1)
-read -p "New Port Websocket NON SSL: " stl
+read -p "New Port Websocket SSL: " stl
 if [ -z $stl ]; then
 echo "Please Input Port"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
-sed -i "s/$tls/$stl/g" /usr/local/bin/ws-dropbear
-sed -i "s/   - Websocket NON SSL       : $tls/   - Websocket NON SSL       : $stl/g" /root/log-install.txt
-/etc/init.d/python restart > /dev/null
+sed -i "s/$ssl/$stl/g" /etc/stunnel/stunnel.conf
+sed -i "s/   - Websocket SSL           : $ssl/   - Websocket SSL           : $stl/g" /root/log-install.txt
+/etc/init.d/stunnel4 restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
 echo "Port $stl is used"
