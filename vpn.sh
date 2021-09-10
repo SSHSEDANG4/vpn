@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# By ZeroVpn
+# Script By SSH SEDANG NETWORK
 # ==================================================
 
 # initialisasi var
