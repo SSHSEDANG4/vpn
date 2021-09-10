@@ -1,5 +1,5 @@
 #!/bin/bash
-#installer Websocker tunneling 
+#installer Websocket tunneling by ssh sedang network
 
 cd
 
