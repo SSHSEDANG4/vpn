@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : Horasss
+# Script by : ssh sedang network
 #!/bin/bash
 clear
 MAX=1
