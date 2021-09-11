@@ -22,4 +22,5 @@ echo > /var/log/btmp
 echo > /var/log/messages
 echo > /var/log/debug
 echo -e "By SSH SEDANG NETWORK"
+menu
 
