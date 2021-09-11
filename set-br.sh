@@ -1,7 +1,7 @@
 #!/bin/bash
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/hesoyam-oke/project/main/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -19,19 +19,19 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user sosohoha573@gmail.com
-from sosohoha573@gmail.com
-password kyeshqqzxkubxviv
+user moving.headers@gmail.com
+from moving.headers@gmail.com
+password sfpeailiusrbibcs 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/hesoyam-oke/project/main/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/hesoyam-oke/project/main/backup.sh"
-wget -O bckp "https://raw.githubusercontent.com/hesoyam-oke/project/main/bckp.sh"
-wget -O restore "https://raw.githubusercontent.com/hesoyam-oke/project/main/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/hesoyam-oke/project/main/strt.sh"
-wget -O limit-speed "https://raw.githubusercontent.com/hesoyam-oke/project/main/limit-speed.sh"
+wget -O autobackup "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/main/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/strt.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/limit-speed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
