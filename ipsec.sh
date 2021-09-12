@@ -2,7 +2,7 @@
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
-# By SSN
+# By SSH SEDANG NETWORK
 # ==================================================
 
 VPN_IPSEC_PSK='myvpn'
@@ -217,7 +217,7 @@ EOF
 
 VPN_PASSWORD_ENC=$(openssl passwd -1 "$VPN_PASSWORD")
 cat > /etc/ipsec.d/passwd <<EOF
-$VPN_USER:$VPN_PASSWORD_ENC:xauth-psk
+$VPN_USER:$VPN_PASSWORD_ENC:l2tp-psk
 EOF
 
 # Create PPTP config

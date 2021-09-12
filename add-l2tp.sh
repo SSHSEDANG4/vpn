@@ -43,7 +43,7 @@ EOF
 
 VPN_PASSWORD_ENC=$(openssl passwd -1 "$VPN_PASSWORD")
 cat >> /etc/ipsec.d/passwd <<EOF
-$VPN_USER:$VPN_PASSWORD_ENC:xauth-psk
+$VPN_USER:$VPN_PASSWORD_ENC:l2tp-psk
 EOF
 
 # Update file attributes
