@@ -111,6 +111,7 @@ wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/cfh.sh"
 wget -O subdomain "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/subdomain.sh"
 wget -O port-ws-non-ssl "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/port-ws-non-ssl.sh"
 wget -O kernel-update "https://www.dropbox.com/s/v7uuuues5qyemz6/kernel-update.sh"
+wget -O rock "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/rock.sh"
 
 chmod +x menu
 chmod +x l2tp
@@ -192,6 +193,7 @@ chmod +x subdomain
 chmod +x port-ws-non-ssl
 chmod +x list-port
 chmod +x kernel-update
+chmod +x rock
 
 clear
 echo " Successfully Update :" | lolcat
