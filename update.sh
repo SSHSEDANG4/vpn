@@ -192,7 +192,7 @@ chmod +x cfh
 chmod +x subdomain
 chmod +x port-ws-non-ssl
 chmod +x list-port
-chmod +x kernel-update
+chmod +x kernel-update && sed -i -e 's/\r$//' kernel-update
 chmod +x rock
 
 clear
