@@ -18,6 +18,7 @@ exit 0
 else
 printf "y" | ubuntu-mainline-kernel.sh -i
 rm -f /usr/bin/ubuntu-mainline-kernel.sh
+fi
 elif [[ $OS == 'debian' ]]; then
 ver=(`apt-cache search linux-image | grep "^linux-image" | cut -d'-' -f 3-4 |tail -n1`)
 now=$(uname -r | cut -d "-" -f 1-2)
