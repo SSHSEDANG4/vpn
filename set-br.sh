@@ -1,7 +1,7 @@
 #!/bin/bash
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://halucok.me/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -19,19 +19,19 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user moving.headers@gmail.com
-from moving.headers@gmail.com
-password sfpeailiusrbibcs 
+user paoandest@gmail.com
+from paoandest@gmail.com
+password 123 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/backup.sh"
-wget -O bckp "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/bckp.sh"
-wget -O restore "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/main/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/strt.sh"
-wget -O limit-speed "https://raw.githubusercontent.com/SSHSEDANG4/vpn/main/limit-speed.sh"
+wget -O autobackup "https://halucok.me/autobackup.sh"
+wget -O backup "https://halucok.me/backup.sh"
+wget -O bckp "https://halucok.me/bckp.sh"
+wget -O restore "https://halucok.me/restore.sh"
+wget -O strt "https://halucok.me/strt.sh"
+wget -O limit-speed "https://halucok.me/limit-speed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
@@ -40,3 +40,4 @@ chmod +x strt
 chmod +x limit-speed
 cd
 rm -f /root/set-br.sh
+
