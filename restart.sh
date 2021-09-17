@@ -37,7 +37,7 @@ case $Restart in
                 clear
                 /etc/init.d/ssh restart
                 /etc/init.d/dropbear restart
-                /etc/init.d/stunnel4 restart
+                systemctl restart stunnel
                 /etc/init.d/openvpn restart
                 /etc/init.d/fail2ban restart
                 /etc/init.d/cron restart
@@ -78,7 +78,7 @@ case $Restart in
                 ;;
                 4)
                 clear
-                /etc/init.d/stunnel4 restart
+                systemctl restart stunnel
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
