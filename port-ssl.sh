@@ -16,7 +16,7 @@ clear
 ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $1}')"
 ssl2="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $2}')"
 echo -e "======================================" | lolcat
-echo -e "Name : Change Port Stunnel4 / SSL Websocket"
+echo -e "Name : Change Port Stunnel"
 echo -e ""
 echo -e "     [1]  Change Port $ssl"
 echo -e "     [2]  Change Port $ssl2"
@@ -36,7 +36,7 @@ cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
 sed -i "s/$ssl/$stl/g" /etc/stunnel/stunnel.conf
 sed -i "s/   - Stunnel4                : $ssl, $ssl2/   - Stunnel4                : $stl, $ssl2/g" /root/log-install.txt
-systemctl restart stunnel > /dev/null
+/etc/init.d/stunnel4 restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
 echo "Port $stl is used"
@@ -52,7 +52,7 @@ cek=$(netstat -nutlp | grep -w $stl)
 if [[ -z $cek ]]; then
 sed -i "s/$ssl2/$stl/g" /etc/stunnel/stunnel.conf
 sed -i "s/   - Stunnel4                : $ssl, $ssl2/   - Stunnel4                : $ssl, $stl/g" /root/log-install.txt
-systemctl restart stunnel > /dev/null
+/etc/init.d/stunnel4 restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
 echo "Port $stl is used"
