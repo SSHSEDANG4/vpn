@@ -14,15 +14,15 @@ echo -e "     [5]  Change Port Vless"
 echo -e "     [6]  Change Port Trojan"
 echo -e "     [7]  Change Port Squid" 
 echo -e "     [8]  Change Port SSTP" 
-echo -e "     [9]  Change Port Websocket NON SSL" 
-#echo -e "     [10] Change Port Websocket NON SSL"
+echo -e "     [9]  Change Port Websocket SSL" 
+echo -e "     [10] Change Port Websocket NON SSL"
 #echo -e "     [11] Change Port SSR"
 #echo -e "     [10]  Change Port Trojan Go [CLOSED]" | lolcat
 echo -e "     [x]  Exit"
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-9 or x] :  " port
+read -p "     Select From Options [1-10 or x] :  " port
 echo -e ""
 case $port in
 1)
@@ -50,7 +50,7 @@ port-squid
 port-sstp
 ;;
 9)
-port-ws-non-ssl
+port-ws-ssl
 ;;
 10)
 port-ws-non-ssl
