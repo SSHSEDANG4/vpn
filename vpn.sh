@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Script By SSH SEDANG NETWORK
+# By ZeroVpn
 # ==================================================
 
 # initialisasi var
@@ -84,7 +84,7 @@ cat > /etc/openvpn/client-tcp-ssl.ovpn <<-END
 client
 dev tun
 proto tcp
-remote xxxxxxxxx 443
+remote xxxxxxxxx 442
 resolv-retry infinite
 route-method exe
 nobind
