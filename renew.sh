@@ -13,7 +13,7 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-echo -e "Name : SSH , Websocket, Openvpn Account"
+echo -e "Name : Renew SSH , Websocket, Openvpn Account"
 echo "=======================================" | lolcat
 read -p "Username       :  " User
 egrep "^$User" /etc/passwd >/dev/null
@@ -29,7 +29,7 @@ usermod -e  $Expiration $User
 egrep "^$User" /etc/passwd >/dev/null
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
-echo -e "Name : SSH , Websocket, Openvpn Account"
+echo -e "Name : Renew SSH , Websocket, Openvpn Account"
 echo -e "========================================" | lolcat
 echo -e ""
 echo -e "    Username        :  $User"
@@ -39,7 +39,7 @@ echo -e ""
 echo -e "========================================" | lolcat
 else
 clear
-echo -e "Name : SSH , Websocket, Openvpn Account"
+echo -e "Name : Renew SSH , Websocket, Openvpn Account"
 echo -e "======================================" | lolcat 
 echo -e ""
 echo -e "        Username Doesnt Exist        "
