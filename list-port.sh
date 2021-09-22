@@ -5,7 +5,7 @@ dropbearport="$(netstat -nlpt | grep -i dropbear | grep -i 0.0.0.0 | awk '{print
 #stunnel4port="$(netstat -nlpt | grep -i stunnel | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 openvpnport="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
-wsssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 4 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $4}')"
+wsssl="$(cat ~/log-install.txt | grep -w "Websocket SSL" | cut -d: -f2|sed 's/ //g')"
 wsnonssl="$(cat ~/log-install.txt | grep -w "Websocket NON SSL" | cut -d: -f2|sed 's/ //g')"
 portwg="$(cat ~/log-install.txt | grep -i Wireguard | cut -d: -f2|sed 's/ //g')"
 portl2tp="$(cat ~/log-install.txt | grep -w "L2TP/IPSEC VPN" | cut -d: -f2|sed 's/ //g')"
