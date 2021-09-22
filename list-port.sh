@@ -26,7 +26,7 @@ echo -e "\e[94m[][][]======================================[][][]"
 echo -e "\e[0m                                                   "
 echo -e "         Port OpenSSH     :  "$opensshport
 echo -e "         Port Dropbear    :  "$dropbearport
-echo -e "         Port SSL         :  "$ssl 
+echo -e "         Port SSL         : "$ssl 
 echo -e "         Port OpenVPN     :  "$openvpnport
 echo -e "         Port Squid       :  "$squidport
 echo -e "         Port WS SSL      :  "$wsssl
