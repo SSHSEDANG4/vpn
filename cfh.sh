@@ -9,9 +9,9 @@ CF_KEY=$key
 set -euo pipefail
 clear
 echo ""
-echo -e "${BLUE}==========================================================${NC}"
+echo -e "=========================================================="
 figlet Pointing BUG | lolcat
-echo -e "${BLUE}==========================================================${NC}"
+echo -e "=========================================================="
 echo ""
 read -p "Masukan Subdomain Anda :" sub
 read -p "Masukan Ip BUG :" IP
