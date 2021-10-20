@@ -42,6 +42,6 @@ echo -e "         Port V2RAY HTTP  :  "$portv2raynontls
 echo -e "         Port VLESS TLS   :  "$portvlesstls
 echo -e "         Port VLESS HTTP  :  "$portvlessnontls
 echo -e "         Port Trojan      :  "$porttrojan
-echo -e "         Port XRAY        :  2096 [CLOSED]"
+echo -e "         Port XRAY        :  8080"
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]\e[0m"
