@@ -19,6 +19,7 @@ echo -e "# Tuan YZ                                       #"
 echo -e "# Adisubagja                                    #"
 echo -e "# Demonk                                        #" 
 echo -e "# Dimas                                         #" 
+echo -e "# Gugun                                         #" 
 echo -e "#-----------------------------------------------#" | lolcat
 echo -e "# Rebuild By : SSH SEDANG NETWORK               #" 
 echo -e "# Contact    : t.me/sshsedang4                  #" 
